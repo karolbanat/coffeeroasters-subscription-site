@@ -2,21 +2,23 @@
 @use './mixins';
 
 :root {
-	// colors
+	/* colors */
 	@each $color, $shades in variables.$colors {
 		@each $shade, $value in $shades {
 			--clr-#{$color}-#{$shade}: #{$value};
 		}
 	}
 
-	// font families
+	/* font families */
+	--ff-primary: 'Barlow', sans-serif;
+	--ff-secondary: 'Fraunces', serif;
 
-	// font wieghts
+	/* font weight */
 	@each $font-weight, $value in variables.$font-weights {
 		--fw-#{$font-weight}: #{$value};
 	}
 
-	// font sizes
+	/* font sizes */
 	@each $screen, $sizes in variables.$font-sizes {
 		@if $screen == small {
 			@each $size, $value in $sizes {
@@ -31,12 +33,33 @@
 		}
 	}
 
-	// border radius
+	// font size exceptions
+	--fz-primary-nav-link: 2.4rem;
+	--fz-steps-number: 7.2rem;
+	--fz-steps-heading: 2.8rem;
+	--fz-location: 2.8rem;
+	--fz-dropdown-heading: 2.4rem;
+	--fz-modal-heading: 2.8rem;
+	--fz-modal-checkout-price: 1.8rem;
+
+	@include mixins.mq(medium) {
+		--fz-primary-nav-link: var(--fz-200);
+		--fz-location: 2.4rem;
+		--fz-dropdown-heading: var(--fz-700);
+		--fz-modal-heading: 4rem;
+		--fz-modal-checkout-price: 3.2rem;
+	}
+
+	@include mixins.mq(large) {
+		--fz-steps-heading: 3.2rem;
+	}
+
+	/* border radius */
 	@each $radius, $value in variables.$border-radius {
 		--borr-#{$radius}: #{$value};
 	}
 
-	// spacings
+	/* spacings */
 	@each $unit, $sizes in variables.$spacings {
 		@each $size, $value in $sizes {
 			--spacing-#{$unit}-#{$size}: #{$value};

@@ -1,0 +1,17 @@
+@use '../base/mixins';
+
+.text-center {
+	text-align: center;
+
+	&-sm {
+		@include mixins.mq(medium) {
+			text-align: initial;
+		}
+	}
+
+	&-md {
+		@include mixins.mq(large) {
+			text-align: initial;
+		}
+	}
+}

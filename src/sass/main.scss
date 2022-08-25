@@ -12,8 +12,10 @@
 @use './components/toggle-btn';
 @use './components/link';
 @use './components/button';
+@use './components/card';
 @use './components/primary-header';
 @use './components/primary-navigation';
+@use './components/collection';
 
 /* utility */
 @use './utility/margin';

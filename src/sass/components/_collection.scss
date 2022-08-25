@@ -1,0 +1,36 @@
+@use '../base/mixins';
+@use '../base/functions';
+
+.collection {
+	--min-padding: 12rem;
+	--max-padding-top: 25rem;
+	--max-padding-bottom: 17rem;
+	position: relative;
+	padding-top: clamp(var(--min-padding), 25vw, var(--max-padding-top));
+	padding-bottom: clamp(var(--min-padding), 18vw, var(--max-padding-bottom));
+
+	&__cards {
+		--even-columns-spacer: clamp(3rem, 10rem - 7.5vw, 5rem);
+	}
+
+	&__heading {
+		$text-color: functions.get-color(neutral, 500);
+		margin-bottom: 1em;
+		font-size: var(--fz-collection-heading);
+		text-align: center;
+		text-transform: lowercase;
+		color: $text-color;
+
+		@include mixins.mq(medium) {
+			position: absolute;
+			top: var(--max-padding-top);
+			left: 50%;
+			width: max-content;
+			z-index: -1;
+			transform: translate(-50%, -65%);
+			color: transparent;
+			background-image: linear-gradient(180deg, fade-out($text-color, 0.25) 10%, var(--clr-neutral-200) 80%);
+			background-clip: text;
+		}
+	}
+}

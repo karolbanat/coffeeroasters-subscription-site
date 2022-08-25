@@ -1,0 +1,31 @@
+.button {
+	/* align */
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	/* spacing */
+	padding: 0.75em 1.75em;
+	/* typography */
+	font-size: var(--fz-500);
+	font-family: var(--ff-secondary);
+	font-weight: var(--fw-900, 700);
+	text-decoration: none;
+	color: var(--button-text);
+	/* appearance */
+	background-color: var(--bg-button);
+	border: none;
+	border-radius: var(--borr-200);
+	cursor: pointer;
+	/* other */
+	transition: background-color 0.35s ease;
+
+	/* green primary button */
+	&--primary {
+		--bg-button: var(--clr-primary-400);
+		--button-text: var(--clr-neutral-200);
+
+		&:hover {
+			--bg-button: var(--clr-primary-300);
+		}
+	}
+}

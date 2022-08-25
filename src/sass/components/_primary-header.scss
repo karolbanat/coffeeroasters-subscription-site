@@ -1,0 +1,37 @@
+@use '../base/mixins';
+
+.primary-header {
+	&__body {
+		--bg-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+		/* spacing */
+		padding : {
+			top: clamp(10rem, 17.5vw, 12.5rem);
+			bottom: clamp(10rem, 15vw, 11.5rem);
+			inline: clamp(2.4rem, -1rem + 7.5vw, 8.4rem);
+		}
+		/* typography */
+		text-align: center;
+		/* appearance */
+		border-radius: var(--borr-400);
+		@include mixins.background-image-reset;
+		background-image: var(--bg-image);
+
+		@include mixins.mq(medium) {
+			--bg-image: url('../assets/home/tablet/image-hero-coffeepress.jpg');
+			text-align: initial;
+		}
+
+		@include mixins.mq(large) {
+			--bg-image: url('../assets/home/desktop/image-hero-coffeepress.jpg');
+		}
+	}
+
+	&__heading {
+		font-size: var(--fz-900);
+		line-height: 1;
+	}
+
+	&__cta {
+		margin-top: 2.25em;
+	}
+}

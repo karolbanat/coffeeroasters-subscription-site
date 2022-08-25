@@ -1,0 +1,18 @@
+@use '../base/mixins';
+
+.even-columns {
+	display: grid;
+	gap: var(--even-columns-spacer, 0.5em);
+
+	@include mixins.mq(large) {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
+
+	&--medium {
+		@include mixins.mq(medium) {
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr;
+		}
+	}
+}

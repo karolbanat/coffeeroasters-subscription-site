@@ -1,0 +1,76 @@
+@use '../base/mixins';
+@use '../base/functions';
+
+.primary-navigation {
+	position: relative;
+	z-index: 999; // to make sure it's on the top all the time
+	/* layout */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* spacing */
+	padding-block: clamp(3.2rem, 5vw, 4.4rem);
+
+	&__nav {
+		@include mixins.max-mq(medium) {
+			$bg-color: functions.get-color(neutral, 200);
+			/* positioning */
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			transform: translateY(100%);
+			isolation: isolate;
+			display: none;
+			/* spacing */
+			padding-block: 4rem;
+			width: 100%;
+			/* typography */
+			text-align: center;
+
+			/* navigation 'shadow' */
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -10;
+				height: 100vh;
+				width: 100%;
+				background-image: linear-gradient(180deg, $bg-color 30%, fade-out($bg-color, 0.49) 90%, transparent 100%);
+			}
+
+			/* show when toggled */
+			&[data-expanded] {
+				display: block;
+			}
+		}
+	}
+
+	/* navigation links list */
+	&__nav-links {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+
+		@include mixins.mq(medium) {
+			flex-direction: row;
+		}
+	}
+
+	/* navigation link */
+	&__nav-link {
+		font-size: var(--fz-primary-nav-link);
+
+		@include mixins.max-mq(medium) {
+			font-family: var(--ff-secondary);
+			color: var(--clr-neutral-700);
+		}
+	}
+
+	/* hide toggle button on larger screens */
+	&__toggle-btn {
+		@include mixins.mq(medium) {
+			display: none;
+		}
+	}
+}

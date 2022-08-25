@@ -1,0 +1,12 @@
+.link {
+	--text-color: var(--clr-neutral-500);
+	font-size: var(--fz-200);
+	font-weight: var(--fw-700);
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--text-color);
+
+	&:hover {
+		--text-color: var(--clr-neutral-700);
+	}
+}

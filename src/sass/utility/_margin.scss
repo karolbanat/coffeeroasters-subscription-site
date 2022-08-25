@@ -1,0 +1,7 @@
+@use '../base/mixins';
+
+.mx-auto-sm {
+	@include mixins.max-mq(medium) {
+		margin-inline: auto;
+	}
+}

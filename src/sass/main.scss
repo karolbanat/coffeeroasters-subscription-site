@@ -2,10 +2,24 @@
 @use './base/reset';
 @use './base/base';
 
+/* layout */
+@use './layout/container';
 @use './layout/flow';
+@use './layout/even-columns';
 
+/* components */
+@use './components/logo';
+@use './components/toggle-btn';
+@use './components/link';
+@use './components/button';
+@use './components/primary-header';
+@use './components/primary-navigation';
+
+/* utility */
+@use './utility/margin';
 @use './utility/image-smooth';
 @use './utility/text-colors';
 @use './utility/text-align';
+@use './utility/text-limited';
 @use './utility/background-color';
 @use './utility/visually-hidden';

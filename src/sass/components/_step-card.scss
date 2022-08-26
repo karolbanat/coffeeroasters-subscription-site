@@ -17,6 +17,7 @@
 
 	&__heading {
 		margin-bottom: clamp(2.4rem, 4.5vw, 4rem);
+		font-size: var(--fz-steps-heading);
 	}
 
 	@include mixins.mq(medium) {
@@ -49,6 +50,10 @@
 			@include mixins.mq(large) {
 				--line-width: 140%;
 			}
+		}
+
+		&__heading {
+			max-width: 10ch;
 		}
 	}
 }

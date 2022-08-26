@@ -12,13 +12,18 @@
 @use './components/toggle-btn';
 @use './components/link';
 @use './components/button';
-@use './components/card';
+@use './components/collection-card';
+@use './components/reason-card';
+@use './components/section-heading';
 @use './components/primary-header';
 @use './components/primary-navigation';
 @use './components/collection';
+@use './components/reasons';
 
 /* utility */
 @use './utility/margin';
+@use './utility/padding';
+@use './utility/border';
 @use './utility/image-smooth';
 @use './utility/text-colors';
 @use './utility/text-align';

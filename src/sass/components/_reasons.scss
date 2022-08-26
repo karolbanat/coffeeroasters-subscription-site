@@ -1,0 +1,11 @@
+.reasons {
+	--even-columns-spacer: clamp(2.4rem, 3vw, 3rem);
+
+	&__body {
+		padding-block: clamp(6.4rem, 12vw, 10rem);
+	}
+
+	&__header {
+		margin-bottom: clamp(6.4rem, 8vw, 9rem);
+	}
+}

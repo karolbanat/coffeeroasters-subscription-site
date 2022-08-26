@@ -21,3 +21,31 @@
 	background-size: cover;
 	background-position: center;
 }
+
+@mixin green-theme {
+	background-color: var(--clr-primary-400);
+	color: var(--clr-neutral-200);
+}
+
+@mixin card-layout {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	&__heading {
+		margin-bottom: 0.75em;
+		font-size: var(--fz-600);
+		line-height: 1.1;
+	}
+
+	@include mq(medium) {
+		flex-direction: row;
+		text-align: left;
+	}
+
+	@include mq(large) {
+		flex-direction: column;
+		text-align: center;
+	}
+}

@@ -1,0 +1,24 @@
+@use '../base/mixins';
+
+.collection-card {
+	@include mixins.card-layout;
+	gap: 1.5em;
+
+	&__body {
+		max-width: 32ch;
+	}
+
+	&__image {
+		max-width: min(100%, 25.5rem);
+	}
+
+	@include mixins.mq(medium) {
+		justify-content: space-evenly;
+	}
+
+	@include mixins.mq(large) {
+		&__body {
+			max-width: 100%;
+		}
+	}
+}

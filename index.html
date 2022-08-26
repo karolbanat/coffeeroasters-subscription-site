@@ -61,7 +61,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="primary-header__body | flow text-neutral-200 bg-neutral-800">
+            <div class="primary-header__body | flow text-neutral-200 bg-neutral-800 padding-inline-clamp">
                 <h1 class="primary-header__heading">Great coffee<br /> made simple.</h1>
                 <p class="text-limited mx-auto-sm">Start your mornings with the world’s best coffees. Try our expertly
                     curated
@@ -77,86 +77,90 @@
         <section aria-labelledby="collection-heading"
                  class="collection">
             <div class="container">
-                <h2 id="collection-heading"
-                    class="collection__heading">Our collection</h2>
-                <ul class="collection__cards | even-columns">
-                    <li>
-                        <article class="card">
-                            <img src="./dist/assets/home/desktop/image-gran-espresso.png"
-                                 alt="Gran espresso coffeeroasters"
-                                 class="card__icon">
-                            <div class="card__body">
-                                <h3 class="card__heading">Gran Espresso</h3>
-                                <p>Light and flavorful blend with cocoa and black pepper for an intense experience</p>
-                            </div>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="card">
-                            <img src="./dist/assets/home/desktop/image-planalto.png"
-                                 alt="Planalto coffeeroasters"
-                                 class="card__icon">
-                            <div class="card__body">
-                                <h3 class="card__heading">Planalto</h3>
-                                <p>Brazilian dark roast with rich and velvety body, and hints of fruits and nuts</p>
-                            </div>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="card">
-                            <img src="./dist/assets/home/desktop/image-piccollo.png"
-                                 alt="Piccollo coffeeroasters"
-                                 class="card__icon">
-                            <div class="card__body">
-                                <h3 class="card__heading">Piccollo</h3>
-                                <p>Mild and smooth blend featuring notes of toasted almond and dried cherry</p>
-                            </div>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="card">
-                            <img src="./dist/assets/home/desktop/image-danche.png"
-                                 alt="Danche coffeeroasters"
-                                 class="card__icon">
-                            <div class="card__body">
-                                <h3 class="card__heading">Danche</h3>
-                                <p>Ethiopian hand-harvested blend densely packed with vibrant fruit notes</p>
-                            </div>
-                        </article>
-                    </li>
-                </ul>
+                <div class="padding-inline-clamp">
+                    <h2 id="collection-heading"
+                        class="collection__heading">Our collection</h2>
+                    <ul class="collection__cards | even-columns">
+                        <li>
+                            <article class="collection-card">
+                                <img src="./dist/assets/home/desktop/image-gran-espresso.png"
+                                     alt="Gran espresso coffeeroasters"
+                                     class="collection-card__image">
+                                <div class="collection-card__body">
+                                    <h3 class="collection-card__heading">Gran Espresso</h3>
+                                    <p>Light and flavorful blend with cocoa and black pepper for an intense experience
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="collection-card">
+                                <img src="./dist/assets/home/desktop/image-planalto.png"
+                                     alt="Planalto coffeeroasters"
+                                     class="collection-card__image">
+                                <div class="collection-card__body">
+                                    <h3 class="collection-card__heading">Planalto</h3>
+                                    <p>Brazilian dark roast with rich and velvety body, and hints of fruits and nuts</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="collection-card">
+                                <img src="./dist/assets/home/desktop/image-piccollo.png"
+                                     alt="Piccollo coffeeroasters"
+                                     class="collection-card__image">
+                                <div class="collection-card__body">
+                                    <h3 class="collection-card__heading">Piccollo</h3>
+                                    <p>Mild and smooth blend featuring notes of toasted almond and dried cherry</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="collection-card">
+                                <img src="./dist/assets/home/desktop/image-danche.png"
+                                     alt="Danche coffeeroasters"
+                                     class="collection-card__image">
+                                <div class="collection-card__body">
+                                    <h3 class="collection-card__heading">Danche</h3>
+                                    <p>Ethiopian hand-harvested blend densely packed with vibrant fruit notes</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section class="reasons">
             <div class="container">
-                <div class="bg-neutral-800 text-neutral-200">
-                    <header class="flow text-center">
+                <div class="reasons__body | bg-neutral-800 text-neutral-200 padding-inline-clamp borr-400">
+                    <header class="reasons__header | flow text-center">
                         <h2 class="section-heading">Why choose us?</h2>
-                        <p>A large part of our role is choosing which particular coffees will be featured
+                        <p class="text-limited-md mx-auto">A large part of our role is choosing which particular coffees
+                            will be featured
                             in our range. This means working closely with the best coffee growers to give
                             you a more impactful experience on every level.</p>
                     </header>
-                    <ul class="even-columns">
+                    <ul class="reasons__cards | even-columns">
                         <li>
-                            <article class="card card--green">
+                            <article class="reason-card">
                                 <img src="./dist/assets/home/desktop/icon-coffee-bean.svg"
                                      alt=""
-                                     class="card__icon">
-                                <div class="card__body">
-                                    <h3 class="card__heading">Best quality</h3>
+                                     class="reason-card__icon">
+                                <div class="reason-card__body">
+                                    <h3 class="reason-card__heading">Best quality</h3>
                                     <p>Discover an endless variety of the world’s best artisan coffee from each of our
                                         roasters.</p>
                                 </div>
                             </article>
                         </li>
                         <li>
-                            <article class="card card--green">
+                            <article class="reason-card">
                                 <img src="./dist/assets/home/desktop/icon-gift.svg"
                                      alt=""
-                                     class="card__icon">
-                                <div class="card__body">
-                                    <h3 class="card__heading">Exclusive benefits</h3>
+                                     class="reason-card__icon">
+                                <div class="reason-card__body">
+                                    <h3 class="reason-card__heading">Exclusive benefits</h3>
                                     <p>Special offers and swag when you subscribe, including 30% off your first
                                         shipment.
                                     </p>
@@ -164,12 +168,12 @@
                             </article>
                         </li>
                         <li>
-                            <article class="card card--green">
+                            <article class="reason-card">
                                 <img src="./dist/assets/home/desktop/icon-truck.svg"
                                      alt=""
-                                     class="card__icon">
-                                <div class="card__body">
-                                    <h3 class="card__heading">Free shipping</h3>
+                                     class="reason-card__icon">
+                                <div class="reason-card__body">
+                                    <h3 class="reason-card__heading">Free shipping</h3>
                                     <p>We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.</p>
                                 </div>
                             </article>

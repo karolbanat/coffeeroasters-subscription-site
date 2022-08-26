@@ -6,7 +6,7 @@
 	--max-padding-top: 25rem;
 	--max-padding-bottom: 17rem;
 	position: relative;
-	padding-top: clamp(var(--min-padding), 25vw, var(--max-padding-top));
+	padding-top: clamp(var(--min-padding), 25vw - 5rem, var(--max-padding-top));
 	padding-bottom: clamp(var(--min-padding), 18vw, var(--max-padding-bottom));
 
 	&__cards {
@@ -27,7 +27,7 @@
 			left: 50%;
 			width: max-content;
 			z-index: -1;
-			transform: translate(-50%, -65%);
+			transform: translate(-50%, calc(var(--fz-collection-heading) * -1));
 			color: transparent;
 			background-image: linear-gradient(180deg, fade-out($text-color, 0.25) 10%, var(--clr-neutral-200) 80%);
 			background-clip: text;

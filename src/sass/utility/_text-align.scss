@@ -2,16 +2,20 @@
 
 .text-center {
 	text-align: center;
+}
 
-	&-sm {
-		@include mixins.mq(medium) {
-			text-align: initial;
-		}
+.text-center-sm {
+	text-align: center;
+
+	@include mixins.mq(medium) {
+		text-align: initial;
 	}
+}
 
-	&-md {
-		@include mixins.mq(large) {
-			text-align: initial;
-		}
+.text-center-md {
+	text-align: center;
+
+	@include mixins.mq(large) {
+		text-align: initial;
 	}
 }

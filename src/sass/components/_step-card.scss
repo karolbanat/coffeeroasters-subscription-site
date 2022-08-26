@@ -1,0 +1,54 @@
+@use '../base/mixins';
+
+.step-card {
+	&__heading,
+	&__step-number {
+		font-family: var(--ff-secondary);
+		font-weight: var(--fw-900);
+		line-height: 1;
+	}
+
+	&__step-number {
+		display: inline-block;
+		margin-bottom: clamp(0.5rem, 2vw, 1.8rem);
+		font-size: var(--fz-steps-number);
+		color: var(--clr-accent-400);
+	}
+
+	&__heading {
+		margin-bottom: clamp(2.4rem, 4.5vw, 4rem);
+	}
+
+	@include mixins.mq(medium) {
+		--circle-size: 3rem;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			margin-bottom: 7.5rem;
+			width: var(--circle-size);
+			aspect-ratio: 1;
+			background-color: var(--clr-neutral-200);
+			border: 1px solid var(--clr-primary-400);
+			border-radius: 50%;
+		}
+
+		&:not(:last-of-type)::after {
+			--line-height: 2px;
+			--line-width: 115%;
+			content: '';
+			position: absolute;
+			top: calc(var(--circle-size) / 2 - var(--line-height) / 2);
+			left: 0;
+			height: var(--line-height);
+			width: var(--line-width);
+			z-index: -1;
+			background-color: var(--clr-accent-400);
+
+			@include mixins.mq(large) {
+				--line-width: 140%;
+			}
+		}
+	}
+}

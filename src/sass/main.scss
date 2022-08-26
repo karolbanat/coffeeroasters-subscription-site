@@ -14,11 +14,13 @@
 @use './components/button';
 @use './components/collection-card';
 @use './components/reason-card';
+@use './components/step-card';
 @use './components/section-heading';
 @use './components/primary-header';
 @use './components/primary-navigation';
 @use './components/collection';
 @use './components/reasons';
+@use './components/plan-steps';
 
 /* utility */
 @use './utility/margin';

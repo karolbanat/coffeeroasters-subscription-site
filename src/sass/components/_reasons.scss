@@ -1,5 +1,6 @@
 .reasons {
 	--even-columns-spacer: clamp(2.4rem, 3vw, 3rem);
+	padding-bottom: 1px;
 
 	&__body {
 		padding-block: clamp(6.4rem, 12vw, 10rem);

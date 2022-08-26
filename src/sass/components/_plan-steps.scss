@@ -1,0 +1,21 @@
+@use '../base/mixins';
+
+.plan-steps {
+	padding-block: clamp(12rem, 18.75vw, 20rem);
+
+	&__heading {
+		color: var(--clr-neutral-500);
+	}
+
+	&__steps {
+		gap: 6rem;
+
+		@include mixins.mq(medium) {
+			gap: 2rem;
+		}
+
+		@include mixins.mq(large) {
+			gap: clamp(6rem, 1rem + 6vw, 10rem);
+		}
+	}
+}

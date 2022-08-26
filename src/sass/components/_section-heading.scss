@@ -1,3 +1,7 @@
 .section-heading {
 	font-size: var(--fz-700);
+
+	&--small {
+		font-size: var(--fz-600);
+	}
 }

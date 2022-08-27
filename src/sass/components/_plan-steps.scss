@@ -6,10 +6,6 @@
 	padding-block: clamp(var(--min-padding), 18.75vw, var(--max-padding));
 	margin-top: var(--reasons-overflow-spacer);
 
-	&__heading {
-		color: var(--clr-neutral-500);
-	}
-
 	&__steps {
 		--even-columns-spacer: 6rem;
 

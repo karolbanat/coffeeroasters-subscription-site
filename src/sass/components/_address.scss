@@ -1,0 +1,22 @@
+.address {
+	font-style: normal;
+
+	&__country {
+		margin-top: 1.25em;
+		margin-bottom: 0.75em;
+		font-family: var(--ff-secondary);
+		font-size: var(--fz-location);
+		font-weight: var(--fw-900);
+		line-height: 1.1;
+	}
+
+	&__phone {
+		display: inline-block;
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

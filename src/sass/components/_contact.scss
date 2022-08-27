@@ -1,0 +1,11 @@
+@use '../base/mixins';
+
+.contact {
+	&__address-list {
+		--even-columns-spacer: 8.4rem;
+
+		@include mixins.mq(medium) {
+			--even-columns-spacer: 1rem;
+		}
+	}
+}

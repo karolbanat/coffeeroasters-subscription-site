@@ -75,7 +75,7 @@
     <main>
         <section class="about">
             <div class="container">
-                <div class="padding-block-clamp-lg">
+                <div class="padding-block-clamp-lg padding-inline-clamp-lg">
                     <article class="about__body">
                         <header class="flow text-center-sm">
                             <h2 class="section-heading about__heading">Our commitment</h2>
@@ -138,14 +138,16 @@
 
         <section class="contact">
             <div class="container">
-                <div class="padding-block-clamp-lg">
-                    <h2 class="section-heading section-heading--small text-center-sm">Our headquarters</h2>
-                    <ul class="even-columns even-columns--medium text-center-sm">
+                <div class="flow padding-block-clamp-lg padding-inline-clamp-lg text-center-sm"
+                     style="--flow-spacer: 7.5rem">
+                    <h2 class="section-heading section-heading--small text-neutral-500">Our headquarters</h2>
+                    <ul class="contact__address-list | even-columns even-columns--medium">
                         <li>
                             <img src="./dist/assets/about/desktop/illustration-uk.svg"
                                  alt=""
                                  class="mx-auto-sm">
-                            <address class="address">
+                            <address class="address | flow"
+                                     style="--flow-spacer: .5em">
                                 <p class="address__country">United Kingdom</p>
                                 <p>68 Asfordby Rd</p>
                                 <p>Alcaston</p>
@@ -158,7 +160,8 @@
                             <img src="./dist/assets/about/desktop/illustration-canada.svg"
                                  alt=""
                                  class="mx-auto-sm">
-                            <address class="address">
+                            <address class="address | flow"
+                                     style="--flow-spacer: .5em">
                                 <p class="address__country">Canada</p>
                                 <p>1528 Eglinton Avenue</p>
                                 <p>Toronto</p>
@@ -171,7 +174,8 @@
                             <img src="./dist/assets/about/desktop/illustration-australia.svg"
                                  alt=""
                                  class="mx-auto-sm">
-                            <address class="address">
+                            <address class="address | flow"
+                                     style="--flow-spacer: .5em">
                                 <p class="address__country">Australia</p>
                                 <p>36 Swanston Street</p>
                                 <p>Kewell</p>

@@ -61,4 +61,15 @@
 	@each $radius, $value in variables.$border-radius {
 		--borr-#{$radius}: #{$value};
 	}
+
+	/* spacing */
+	--reasons-overflow-spacer: 50rem;
+
+	@include mixins.mq(medium) {
+		--reasons-overflow-spacer: 30rem;
+	}
+
+	@include mixins.mq(large) {
+		--reasons-overflow-spacer: 15rem;
+	}
 }

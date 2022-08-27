@@ -7,11 +7,16 @@
 		--min-padding-block: 6.4rem;
 		--max-padding-block: 10rem;
 		padding-block: clamp(var(--min-padding-block), 12vw, var(--max-padding-block));
+		padding-bottom: 01rem;
 	}
 
 	&__header {
 		--min-margin-bottom: 6.4rem;
 		--max-margin-bottom: 9rem;
 		margin-bottom: clamp(var(--min-margin-bottom), 8vw, var(--max-margin-bottom));
+	}
+
+	&__cards {
+		margin-bottom: calc(var(--reasons-overflow-spacer) * -1);
 	}
 }

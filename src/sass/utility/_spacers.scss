@@ -1,0 +1,17 @@
+@use '../base/mixins';
+
+/* margins */
+.mx-auto {
+	margin-inline: auto;
+}
+
+.mx-auto-sm {
+	@include mixins.max-mq(medium) {
+		margin-inline: auto;
+	}
+}
+
+/* paddings */
+.padding-inline-clamp {
+	padding-inline: clamp(2.4rem, -1rem + 7.5vw, 8.4rem);
+}

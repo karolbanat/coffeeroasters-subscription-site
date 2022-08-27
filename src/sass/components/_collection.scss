@@ -10,7 +10,9 @@
 	padding-bottom: clamp(var(--min-padding), 18vw, var(--max-padding-bottom));
 
 	&__cards {
-		--even-columns-spacer: clamp(3rem, 10rem - 7.5vw, 5rem);
+		--min-gap: 3rem;
+		--max-gap: 5rem;
+		--even-columns-spacer: clamp(var(--min-gap), 10rem - 7.5vw, var(--max-gap));
 	}
 
 	&__heading {
@@ -23,11 +25,12 @@
 
 		@include mixins.mq(medium) {
 			position: absolute;
+			z-index: -1;
 			top: var(--max-padding-top);
 			left: 50%;
-			width: max-content;
-			z-index: -1;
 			transform: translate(-50%, calc(var(--fz-collection-heading) * -1));
+			width: max-content;
+			/* gradient for text color */
 			color: transparent;
 			background-image: linear-gradient(180deg, fade-out($text-color, 0.25) 10%, var(--clr-neutral-200) 80%);
 			background-clip: text;

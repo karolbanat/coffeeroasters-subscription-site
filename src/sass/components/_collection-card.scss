@@ -1,15 +1,17 @@
 @use '../base/mixins';
 
 .collection-card {
+	--body-max-width: 32ch;
+	--image-max-width: 25.5rem;
 	@include mixins.card-layout;
-	gap: 1.5em;
+	gap: 2.4rem;
 
 	&__body {
-		max-width: 32ch;
+		max-width: var(--body-max-width);
 	}
 
 	&__image {
-		max-width: min(100%, 25.5rem);
+		max-width: min(100%, var(--image-max-width));
 	}
 
 	@include mixins.mq(medium) {
@@ -17,8 +19,6 @@
 	}
 
 	@include mixins.mq(large) {
-		&__body {
-			max-width: 100%;
-		}
+		--body-max-width: 100%;
 	}
 }

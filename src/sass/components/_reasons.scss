@@ -1,12 +1,17 @@
 .reasons {
-	--even-columns-spacer: clamp(2.4rem, 3vw, 3rem);
-	padding-bottom: 1px;
+	--min-gap: 2.4rem;
+	--max-gap: 3rem;
+	--even-columns-spacer: clamp(var(--min-gap), 3vw, var(--max-gap));
 
 	&__body {
-		padding-block: clamp(6.4rem, 12vw, 10rem);
+		--min-padding-block: 6.4rem;
+		--max-padding-block: 10rem;
+		padding-block: clamp(var(--min-padding-block), 12vw, var(--max-padding-block));
 	}
 
 	&__header {
-		margin-bottom: clamp(6.4rem, 8vw, 9rem);
+		--min-margin-bottom: 6.4rem;
+		--max-margin-bottom: 9rem;
+		margin-bottom: clamp(var(--min-margin-bottom), 8vw, var(--max-margin-bottom));
 	}
 }

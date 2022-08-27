@@ -2,11 +2,15 @@
 
 .primary-header {
 	&__body {
+		--min-padding-top: 10rem;
+		--max-padding-top: 12.5rem;
+		--min-padding-bottom: 10rem;
+		--max-padding-bottom: 11.5rem;
 		--bg-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
 		/* spacing */
 		padding : {
-			top: clamp(10rem, 17.5vw, 12.5rem);
-			bottom: clamp(10rem, 15vw, 11.5rem);
+			top: clamp(var(--min-padding-top), 17.5vw, var(--max-padding-top));
+			bottom: clamp(var(--min-padding-bottom), 15vw, var(--max-padding-bottom));
 		}
 		/* typography */
 		text-align: center;

@@ -1,9 +1,10 @@
 .toggle-btn {
+	--button-size: 4rem;
 	/* for aligining items in center */
 	display: inline-grid;
 	place-items: center;
 	/* sizing */
-	width: 4rem;
+	width: var(--button-size);
 	aspect-ratio: 1;
 	/* appearance reset */
 	background: none;

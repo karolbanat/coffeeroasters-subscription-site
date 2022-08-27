@@ -29,12 +29,9 @@
 @use './components/primary-footer';
 
 /* utility */
-@use './utility/margin';
-@use './utility/padding';
+@use './utility/spacers';
 @use './utility/border';
 @use './utility/image-smooth';
-@use './utility/text-colors';
-@use './utility/text-align';
-@use './utility/text-limited';
+@use './utility/text';
 @use './utility/background-color';
 @use './utility/visually-hidden';

@@ -1,0 +1,15 @@
+@use '../base/mixins';
+
+.image-flex-container-md {
+	@include mixins.mq(medium) {
+		flex: 1 0 auto;
+		max-width: 45%;
+	}
+}
+
+.image-flex-container-lg {
+	@include mixins.mq(large) {
+		flex: 1 0 auto;
+		max-width: 45%;
+	}
+}

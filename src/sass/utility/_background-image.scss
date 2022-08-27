@@ -1,0 +1,15 @@
+@use '../base/mixins';
+
+.quality-background {
+	--bg-image: url('../assets/about/mobile/bg-quality.png');
+	@include mixins.background-image-reset;
+	background-image: var(--bg-image);
+
+	@include mixins.mq(medium) {
+		--bg-image: url('../assets/about/tablet/bg-quality.png');
+	}
+
+	@include mixins.mq(large) {
+		--bg-image: url('../assets/about/desktop/bg-quality.png');
+	}
+}

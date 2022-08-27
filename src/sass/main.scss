@@ -6,6 +6,7 @@
 @use './layout/container';
 @use './layout/flow';
 @use './layout/even-columns';
+@use './layout/flex';
 
 /* components */
 @use './components/logo';
@@ -31,6 +32,7 @@
 
 /* about page */
 @use './components/about';
+@use './components/quality';
 
 /* utility */
 @use './utility/spacers';
@@ -38,4 +40,5 @@
 @use './utility/image';
 @use './utility/text';
 @use './utility/background-color';
+@use './utility/background-image';
 @use './utility/visually-hidden';

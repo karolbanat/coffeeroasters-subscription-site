@@ -15,3 +15,6 @@
 .padding-inline-clamp {
 	padding-inline: clamp(2.4rem, -1rem + 7.5vw, 8.4rem);
 }
+.padding-block-clamp-lg {
+	padding-block: clamp(12rem, 3rem + 15vw, 16.8rem);
+}

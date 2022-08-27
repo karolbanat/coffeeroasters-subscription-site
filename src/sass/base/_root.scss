@@ -66,12 +66,15 @@
 
 	/* spacing */
 	--reasons-overflow-spacer: 50rem;
+	--quality-overflow-spacer: 7.8rem;
 
 	@include mixins.mq(medium) {
 		--reasons-overflow-spacer: 32rem;
+		--quality-overflow-spacer: 16rem;
 	}
 
 	@include mixins.mq(large) {
 		--reasons-overflow-spacer: 17rem;
+		--quality-overflow-spacer: 8.8rem;
 	}
 }

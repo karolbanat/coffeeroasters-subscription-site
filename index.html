@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <a href="#skip-content"
+    <a href="#primary-heading"
        class="skip-link">Skip to content</a>
 
     <header class="primary-header">
@@ -64,7 +64,7 @@
                 </div>
             </nav>
             <div class="primary-header__body | flow text-neutral-200 bg-neutral-800 padding-inline-clamp">
-                <h1 id="skip-content"
+                <h1 id="primary-heading"
                     class="primary-header__heading">Great coffee<br /> made simple.</h1>
                 <p class="text-limited mx-auto-sm">Start your mornings with the world’s best coffees. Try our expertly
                     curated
@@ -134,11 +134,13 @@
             </div>
         </section>
 
-        <section class="reasons">
+        <section aria-labelledby="reasons-heading"
+                 class="reasons">
             <div class="container">
                 <div class="reasons__body | bg-neutral-800 text-neutral-200 padding-inline-clamp borr-400">
                     <header class="reasons__header | flow text-center">
-                        <h2 class="section-heading">Why choose us?</h2>
+                        <h2 id="reasons-heading"
+                            class="section-heading">Why choose us?</h2>
                         <p class="text-limited-md mx-auto">A large part of our role is choosing which particular coffees
                             will be featured
                             in our range. This means working closely with the best coffee growers to give
@@ -186,11 +188,13 @@
             </div>
         </section>
 
-        <section class="plan-steps | text-center-sm">
+        <section id="steps-heading"
+                 class="plan-steps | text-center-sm">
             <div class="container">
                 <div class="padding-inline-clamp flow"
                      style="--flow-spacer: 6.4rem">
-                    <h2 class="section-heading section-heading--small text-neutral-500">How it works
+                    <h2 id="steps-heading"
+                        class="section-heading section-heading--small text-neutral-500">How it works
                     </h2>
                     <ol class="plan-steps__steps | even-columns even-columns--medium">
                         <li class="step-card">
@@ -224,7 +228,8 @@
     <footer class="primary-footer">
         <div class="container">
             <div class="primary-footer__body | bg-neutral-800 text-neutral-200 text-center-md padding-inline-clamp">
-                <a href="#">
+                <a aria-label="Home page"
+                   href="#">
                     <img src="./dist/assets/shared/desktop/logo-light.svg"
                          alt="coffeeroasters"
                          class="logo">

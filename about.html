@@ -25,7 +25,7 @@
 
 <body>
 
-    <a href="#skip-content"
+    <a href="#primary-heading"
        class="skip-link">Skip to content</a>
 
     <header class="primary-header primary-header--about">
@@ -62,7 +62,7 @@
                 </div>
             </nav>
             <div class="primary-header__body | flow text-neutral-200 bg-neutral-800 padding-inline-clamp">
-                <h1 id="skip-content"
+                <h1 id="primary-heading"
                     class="primary-header__heading primary-header__heading--small">About us</h1>
                 <p class="text-limited mx-auto-sm">Coffeeroasters began its journey of exotic discovery in 1999,
                     highlighting stories of
@@ -73,12 +73,14 @@
     </header>
 
     <main>
-        <section class="about">
+        <section aria-labelledby="about-heading"
+                 class="about">
             <div class="container">
                 <div class="padding-block-clamp-lg padding-inline-clamp-lg">
                     <article class="about__body">
                         <header class="flow text-center-sm">
-                            <h2 class="section-heading about__heading">Our commitment</h2>
+                            <h2 id="about-heading"
+                                class="section-heading about__heading">Our commitment</h2>
                             <p>We’re built on a simple mission and a commitment to doing good along the way. We want to
                                 make it easy for you to discover and brew the world’s best coffee at home. It all starts
                                 at the source. To locate the specific lots we want to purchase, we travel nearly 60 days
@@ -104,14 +106,16 @@
             </div>
         </section>
 
-        <section class="quality">
+        <section aria-labelledby="quality-heading"
+                 class="quality">
             <div class="container">
                 <div
                      class="quality-background bg-neutral-800 text-neutral-200 padding-inline-clamp borr-400 text-center-md">
                     <article class="quality__body">
                         <header class="quality__header | flow"
                                 style="--flow-spacer: 2em">
-                            <h2 class="section-heading">Uncompromising quality</h2>
+                            <h2 id="quality-heading"
+                                class="section-heading">Uncompromising quality</h2>
                             <p>Although we work with growers who pay close attention to all stages of harvest and
                                 processing,
                                 we employ, on our end, a rigorous quality control program to avoid over-roasting or
@@ -136,11 +140,13 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section aria-labelledby="contact-heading"
+                 class="contact">
             <div class="container">
                 <div class="flow padding-block-clamp-lg padding-inline-clamp-lg text-center-sm"
                      style="--flow-spacer: 7.5rem">
-                    <h2 class="section-heading section-heading--small text-neutral-500">Our headquarters</h2>
+                    <h2 id="contact-heading"
+                        class="section-heading section-heading--small text-neutral-500">Our headquarters</h2>
                     <ul class="contact__address-list | even-columns even-columns--medium">
                         <li>
                             <img src="./dist/assets/about/desktop/illustration-uk.svg"
@@ -193,7 +199,8 @@
     <footer class="primary-footer">
         <div class="container">
             <div class="primary-footer__body | bg-neutral-800 text-neutral-200 text-center-md padding-inline-clamp">
-                <a href="#">
+                <a aria-label="Home page"
+                   href="./">
                     <img src="./dist/assets/shared/desktop/logo-light.svg"
                          alt="coffeeroasters"
                          class="logo">

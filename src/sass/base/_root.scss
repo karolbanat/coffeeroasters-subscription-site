@@ -66,10 +66,10 @@
 	--reasons-overflow-spacer: 50rem;
 
 	@include mixins.mq(medium) {
-		--reasons-overflow-spacer: 30rem;
+		--reasons-overflow-spacer: 32rem;
 	}
 
 	@include mixins.mq(large) {
-		--reasons-overflow-spacer: 15rem;
+		--reasons-overflow-spacer: 17rem;
 	}
 }

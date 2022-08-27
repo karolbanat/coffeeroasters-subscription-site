@@ -29,10 +29,13 @@
 @use './components/plan-steps';
 @use './components/primary-footer';
 
+/* about page */
+@use './components/about';
+
 /* utility */
 @use './utility/spacers';
 @use './utility/border';
-@use './utility/image-smooth';
+@use './utility/image';
 @use './utility/text';
 @use './utility/background-color';
 @use './utility/visually-hidden';

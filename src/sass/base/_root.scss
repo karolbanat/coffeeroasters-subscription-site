@@ -38,6 +38,7 @@
 	--fz-collection-heading: 4rem;
 	--fz-steps-number: 7.2rem;
 	--fz-steps-heading: 2.8rem;
+	--fz-commitment-heading: 3.2rem;
 	--fz-location: 2.8rem;
 	--fz-dropdown-heading: 2.4rem;
 	--fz-modal-heading: 2.8rem;
@@ -55,6 +56,7 @@
 	@include mixins.mq(large) {
 		--fz-collection-heading: 15rem;
 		--fz-steps-heading: 3.2rem;
+		--fz-commitment-heading: 4rem;
 	}
 
 	/* border radius */

@@ -23,6 +23,7 @@
 	@include mixins.mq(medium) {
 		--circle-size: 3rem;
 		position: relative;
+		isolation: isolate;
 
 		&::before {
 			content: '';

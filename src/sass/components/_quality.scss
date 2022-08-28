@@ -1,6 +1,8 @@
 @use '../base/mixins';
 
 .quality {
+	margin-top: var(--quality-overflow-spacer);
+
 	&__body {
 		@include mixins.flex-reverse-base;
 		padding-top: 0.1rem;
@@ -11,7 +13,8 @@
 	}
 
 	&__image {
-		margin-top: calc(var(--quality-overflow-spacer) * -1);
+		--margin-top: calc(var(--quality-overflow-spacer) * -1);
+		margin-top: var(--margin-top);
 	}
 
 	@include mixins.mq(large) {
@@ -22,7 +25,7 @@
 
 		&__image {
 			margin-top: 0;
-			transform: translateY(calc(var(--quality-overflow-spacer) * -1));
+			transform: translateY(var(--margin-top));
 		}
 	}
 }

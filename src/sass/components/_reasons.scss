@@ -2,12 +2,13 @@
 	--min-gap: 2.4rem;
 	--max-gap: 3rem;
 	--even-columns-spacer: clamp(var(--min-gap), 3vw, var(--max-gap));
+	margin-bottom: var(--reasons-overflow-spacer);
 
 	&__body {
 		--min-padding-block: 6.4rem;
 		--max-padding-block: 10rem;
 		padding-block: clamp(var(--min-padding-block), 12vw, var(--max-padding-block));
-		padding-bottom: 01rem;
+		padding-bottom: 0.1rem;
 	}
 
 	&__header {

@@ -4,7 +4,6 @@
 	--min-padding: 12rem;
 	--max-padding: calc(20rem);
 	padding-block: clamp(var(--min-padding), 18.75vw, var(--max-padding));
-	margin-top: var(--reasons-overflow-spacer);
 
 	&__steps {
 		--even-columns-spacer: 6rem;

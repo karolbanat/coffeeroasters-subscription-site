@@ -3,8 +3,7 @@
 .step-card {
 	&__heading,
 	&__step-number {
-		font-family: var(--ff-secondary);
-		font-weight: var(--fw-900);
+		@include mixins.accent-font;
 		line-height: 1;
 	}
 

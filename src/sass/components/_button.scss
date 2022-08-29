@@ -1,3 +1,5 @@
+@use '../base/mixins';
+
 .button {
 	/* align */
 	display: inline-flex;
@@ -6,9 +8,8 @@
 	/* spacing */
 	padding: 0.75em 1.75em;
 	/* typography */
+	@include mixins.accent-font;
 	font-size: var(--fz-500);
-	font-family: var(--ff-secondary);
-	font-weight: var(--fw-900, 700);
 	text-decoration: none;
 	color: var(--button-text);
 	/* appearance */

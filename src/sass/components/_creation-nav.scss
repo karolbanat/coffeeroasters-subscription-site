@@ -25,11 +25,10 @@
 
 		&__nav-link {
 			--link-color: var(--clr-neutral-500);
+			@include mixins.accent-font;
 			display: inline-flex;
 			gap: 2.4rem;
 			font-size: 2.4rem;
-			font-family: var(--ff-secondary);
-			font-weight: var(--fw-900);
 			text-decoration: none;
 			color: var(--link-color);
 			cursor: pointer;

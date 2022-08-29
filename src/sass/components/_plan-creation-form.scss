@@ -1,3 +1,5 @@
+@use '../base/mixins';
+
 .plan-creation-form {
 	--flow-spacer: 9rem;
 	display: flex;
@@ -7,6 +9,7 @@
 	&__details {
 		& > summary {
 			--icon-angle: 0;
+			@include mixins.accent-font;
 			/* layout */
 			display: flex;
 			align-items: center;
@@ -14,8 +17,6 @@
 			margin-bottom: 3.2rem;
 			/* typography */
 			font-size: var(--fz-dropdown-heading);
-			font-family: var(--ff-secondary);
-			font-weight: var(--fw-900);
 			color: var(--clr-neutral-500);
 			/* other */
 			cursor: pointer;

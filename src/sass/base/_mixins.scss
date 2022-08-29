@@ -55,3 +55,8 @@
 	flex-direction: column-reverse;
 	align-items: center;
 }
+
+@mixin accent-font {
+	font-family: var(--ff-secondary);
+	font-weight: var(--fw-900);
+}

@@ -62,7 +62,7 @@
 		font-size: var(--fz-primary-nav-link);
 
 		@include mixins.max-mq(medium) {
-			font-family: var(--ff-secondary);
+			@include mixins.accent-font;
 			color: var(--clr-neutral-700);
 		}
 	}

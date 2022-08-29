@@ -1,0 +1,41 @@
+@use '../base/mixins';
+@use '../base/functions';
+
+.creation-nav {
+	display: none;
+
+	@include mixins.mq(large) {
+		display: block;
+
+		&__nav-links {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__nav-item {
+			$line-color: functions.get-color(neutral, 500);
+			padding-block: 1em;
+
+			&:not(:last-of-type) {
+				border-bottom: 1px solid fade-out($line-color, 0.75);
+			}
+		}
+
+		&__nav-link {
+			--link-color: var(--clr-neutral-500);
+			display: inline-flex;
+			gap: 2.4rem;
+			font-size: 2.4rem;
+			font-family: var(--ff-secondary);
+			font-weight: var(--fw-900);
+			text-decoration: none;
+			color: var(--link-color);
+			cursor: pointer;
+
+			&:hover,
+			:focus {
+				--link-color: var(--clr-neutral-700);
+			}
+		}
+	}
+}

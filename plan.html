@@ -112,19 +112,25 @@
         <section aria-label="Plan creation form"
                  class="creation">
             <div class="container">
-                <div class="padding-inline-clamp-lg">
+                <div class="creation__layout | padding-inline-clamp-lg">
                     <nav aria-label="Plan creation form"
                          class="creation-nav">
-                        <ul>
-                            <li><a href="#">01 Preferences</a></li>
-                            <li><a href="#">02 Bean type</a></li>
-                            <li><a href="#">03 Quantity</a></li>
-                            <li><a href="#">04 Grind option</a></li>
-                            <li><a href="#">05 Deliveries</a></li>
+                        <ul class="creation-nav__nav-links">
+                            <li class="creation-nav__nav-item"><a href="#preferences"
+                                   class="creation-nav__nav-link"><span>01</span> Preferences</a></li>
+                            <li class="creation-nav__nav-item"><a href="#bean-type"
+                                   class="creation-nav__nav-link"><span>02</span> Bean type</a></li>
+                            <li class="creation-nav__nav-item"><a href="#quantity"
+                                   class="creation-nav__nav-link"><span>03</span> Quantity</a></li>
+                            <li class="creation-nav__nav-item"><a href="#grind-option"
+                                   class="creation-nav__nav-link"><span>04</span> Grind option</a></li>
+                            <li class="creation-nav__nav-item"><a href="#deliveries"
+                                   class="creation-nav__nav-link"><span>05</span> Deliveries</a></li>
                         </ul>
                     </nav>
                     <form class="plan-creation-form | flow">
-                        <details class="plan-creation-form__details">
+                        <details id="preferences"
+                                 class="plan-creation-form__details">
                             <summary>How do you drink your coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
@@ -161,7 +167,8 @@
                                 </div>
                             </fieldset>
                         </details>
-                        <details class="plan-creation-form__details">
+                        <details id="bean-type"
+                                 class="plan-creation-form__details">
                             <summary>What type of coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
@@ -198,7 +205,8 @@
                                 </div>
                             </fieldset>
                         </details>
-                        <details class="plan-creation-form__details">
+                        <details id="quantity"
+                                 class="plan-creation-form__details">
                             <summary>How much would you like? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
@@ -235,7 +243,8 @@
                                 </div>
                             </fieldset>
                         </details>
-                        <details class="plan-creation-form__details">
+                        <details id="grind-option"
+                                 class="plan-creation-form__details">
                             <summary>Want us to grind them? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
@@ -272,7 +281,8 @@
                                 </div>
                             </fieldset>
                         </details>
-                        <details class="plan-creation-form__details">
+                        <details id="deliveries"
+                                 class="plan-creation-form__details">
                             <summary>How often should we deliver? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"

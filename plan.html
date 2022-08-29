@@ -70,31 +70,41 @@
     <main>
 
         <section aria-label="Plan creation steps"
-                 class="plan-steps |text-center-sm">
-            <div class="container">
-                <div class="padding-inline-clamp bg-neutral-800 text-neutral-200">
-                    <ol class="plan-steps__steps | even-columns even-columns--medium">
-                        <li class="step-card">
-                            <span class="step-card__step-number">01</span>
-                            <h3 class="step-card__heading">Pick your coffee</h3>
-                            <p>Select from our evolving range of artisan coffees. Our beans are ethically
-                                sourced and we pay fair prices for them. There's new coffees in all profiles
-                                every month for you to try out.</p>
-                        </li>
-                        <li class="step-card">
-                            <span class="step-card__step-number">02</span>
-                            <h3 class="step-card__heading">Choose the frequency</h3>
-                            <p>Customize your order frequency, quantity, even your roast style and grind type.
-                                Pause, skip or cancel your subscription with no commitment through our online portal.
-                            </p>
-                        </li>
-                        <li class="step-card">
-                            <span class="step-card__step-number">03</span>
-                            <h3 class="step-card__heading">Receive and enjoy!</h3>
-                            <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-                                world-class coffees curated to provide a distinct tasting experience.</p>
-                        </li>
-                    </ol>
+                 class="plan-steps | text-center-sm"
+                 data-page="creation">
+            <div class="plan-steps__background"
+                 data-bg-size="medium">
+                <div class="container">
+                    <div class="plan-steps__background | padding-inline-clamp-lg text-neutral-200"
+                         data-bg-size="large">
+                        <ol class="plan-steps__steps | even-columns even-columns--medium">
+                            <li class="step-card"
+                                data-theme="dark">
+                                <span class="step-card__step-number">01</span>
+                                <h3 class="step-card__heading">Pick your coffee</h3>
+                                <p>Select from our evolving range of artisan coffees. Our beans are ethically
+                                    sourced and we pay fair prices for them. There's new coffees in all profiles
+                                    every month for you to try out.</p>
+                            </li>
+                            <li class="step-card"
+                                data-theme="dark">
+                                <span class="step-card__step-number">02</span>
+                                <h3 class="step-card__heading">Choose the frequency</h3>
+                                <p>Customize your order frequency, quantity, even your roast style and grind type.
+                                    Pause, skip or cancel your subscription with no commitment through our online
+                                    portal.
+                                </p>
+                            </li>
+                            <li class="step-card"
+                                data-theme="dark">
+                                <span class="step-card__step-number">03</span>
+                                <h3 class="step-card__heading">Receive and enjoy!</h3>
+                                <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy
+                                    award-winning
+                                    world-class coffees curated to provide a distinct tasting experience.</p>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </section>
@@ -102,9 +112,9 @@
         <section aria-label="Plan creation form"
                  class="creation">
             <div class="container">
-                <div class="padding-inline-clamp">
-                    <!-- TODO: change to nav? -->
-                    <div class="creation-nav">
+                <div class="padding-inline-clamp-lg">
+                    <nav aria-label="Plan creation form"
+                         class="creation-nav">
                         <ul>
                             <li><a href="#">01 Preferences</a></li>
                             <li><a href="#">02 Bean type</a></li>
@@ -112,189 +122,190 @@
                             <li><a href="#">04 Grind option</a></li>
                             <li><a href="#">05 Deliveries</a></li>
                         </ul>
-                    </div>
+                    </nav>
+                    <form class="plan-creation-form">
+                        <details>
+                            <summary>How do you drink your coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                                     alt=""></summary>
+                            <fieldset role="radiogroup"
+                                      class="even-columns even-columns--medium">
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="method"
+                                           id="capsule-method">
+                                    <label for="capsule-method">
+                                        <span class="custom-radio-button__heading">Capsule</span>
+                                        Compatible with Nespresso systems and similar brewers
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="method"
+                                           id="filter-method">
+                                    <label for="filter-method">
+                                        <span class="custom-radio-button__heading">Filter</span>
+                                        For pour over or drip methods like Aeropress, Chemex, and V60
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="method"
+                                           id="espresso-method">
+                                    <label for="espresso-method">
+                                        <span class="custom-radio-button__heading">Espresso</span>
+                                        Dense and finely ground beans for an intense, flavorful experience
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </details>
+                        <details>
+                            <summary>What type of coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                                     alt=""></summary>
+                            <fieldset role="radiogroup"
+                                      class="even-columns even-columns--medium">
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="type"
+                                           id="single-origin-type">
+                                    <label for="single-origin-type">
+                                        <span class="custom-radio-button__heading">Single origin</span>
+                                        Distinct, high quality coffee from a specific family-owned farm
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="type"
+                                           id="decaf-type">
+                                    <label for="decaf-type">
+                                        <span class="custom-radio-button__heading">Decaf</span>
+                                        Just like regular coffee, except the caffeine has been removed
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="type"
+                                           id="blended-type">
+                                    <label for="blended-type">
+                                        <span class="custom-radio-button__heading">Blended</span>
+                                        Combination of two or three dark roasted beans of organic coffees
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </details>
+                        <details>
+                            <summary>How much would you like? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                                     alt=""></summary>
+                            <fieldset role="radiogroup"
+                                      class="even-columns even-columns--medium">
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="amount"
+                                           id="small-amount">
+                                    <label for="small-amount">
+                                        <span class="custom-radio-button__heading">250g</span>
+                                        Perfect for the solo drinker. Yields about 12 delicious cups.
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="amount"
+                                           id="medium-amount">
+                                    <label for="medium-amount">
+                                        <span class="custom-radio-button__heading">500g</span>
+                                        Perfect option for a couple. Yields about 40 delectable cups.
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="amount"
+                                           id="large-amount">
+                                    <label for="large-amount">
+                                        <span class="custom-radio-button__heading">1000g</span>
+                                        Perfect for offices and events. Yields about 90 delightful cups.
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </details>
+                        <details>
+                            <summary>Want us to grind them? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                                     alt=""></summary>
+                            <fieldset role="radiogroup"
+                                      class="even-columns even-columns--medium">
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="grind"
+                                           id="wholebean-grind">
+                                    <label for="wholebean-grind">
+                                        <span class="custom-radio-button__heading">Wholebean</span>
+                                        Best choice if you cherish the full sensory experience
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="grind"
+                                           id="filter-grind">
+                                    <label for="filter-grind">
+                                        <span class="custom-radio-button__heading">Filter</span>
+                                        For drip or pour-over coffee methods such as V60 or Aeropress
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="grind"
+                                           id="cafetiere-grind">
+                                    <label for="cafetiere-grind">
+                                        <span class="custom-radio-button__heading">Cafetiére</span>
+                                        Course ground beans specially suited for french press coffee
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </details>
+                        <details>
+                            <summary>How often should we deliver? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                                     alt=""></summary>
+                            <fieldset role="radiogroup"
+                                      class="even-columns even-columns--medium">
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="frequency"
+                                           id="one-week-frequency">
+                                    <label for="one-week-frequency">
+                                        <span class="custom-radio-button__heading">Every week</span>
+                                        $14.00 per shipment. Includes free first-class shipping.
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="frequency"
+                                           id="two-weeks-frequency">
+                                    <label for="two-weeks-frequency">
+                                        <span class="custom-radio-button__heading">Every 2 weeks</span>
+                                        $17.25 per shipment. Includes free priority shipping.
+                                    </label>
+                                </div>
+                                <div class="custom-radio-button">
+                                    <input type="radio"
+                                           name="frequency"
+                                           id="month-frequency">
+                                    <label for="month-frequency">
+                                        <span class="custom-radio-button__heading">Every month</span>
+                                        $22.50 per shipment. Includes free priority shipping.
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </details>
+                        <div class="plan-creation-form__summary">
+                            <p class="plan-creation-form__summary-heading">Order Summary</p>
+                            <p>“I drink coffee <span>_____</span>, with a <span>_____</span> type of bean.
+                                <span>_____</span> ground ala <span>_____</span>, sent to me <span>_____</span>.”
+                            </p>
+                        </div>
+                        <button type="submit"
+                                disabled
+                                class="button button--primary">Create my plan</button>
+                    </form>
                 </div>
-                <form class="plan-creation-form">
-                    <details>
-                        <summary>How do you drink your coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
-                                 alt=""></summary>
-                        <fieldset role="radiogroup"
-                                  class="even-columns even-columns--medium">
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="method"
-                                       id="capsule-method">
-                                <label for="capsule-method">
-                                    <span class="custom-radio-button__heading">Capsule</span>
-                                    Compatible with Nespresso systems and similar brewers
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="method"
-                                       id="filter-method">
-                                <label for="filter-method">
-                                    <span class="custom-radio-button__heading">Filter</span>
-                                    For pour over or drip methods like Aeropress, Chemex, and V60
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="method"
-                                       id="espresso-method">
-                                <label for="espresso-method">
-                                    <span class="custom-radio-button__heading">Espresso</span>
-                                    Dense and finely ground beans for an intense, flavorful experience
-                                </label>
-                            </div>
-                        </fieldset>
-                    </details>
-                    <details>
-                        <summary>What type of coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
-                                 alt=""></summary>
-                        <fieldset role="radiogroup"
-                                  class="even-columns even-columns--medium">
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="type"
-                                       id="single-origin-type">
-                                <label for="single-origin-type">
-                                    <span class="custom-radio-button__heading">Single origin</span>
-                                    Distinct, high quality coffee from a specific family-owned farm
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="type"
-                                       id="decaf-type">
-                                <label for="decaf-type">
-                                    <span class="custom-radio-button__heading">Decaf</span>
-                                    Just like regular coffee, except the caffeine has been removed
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="type"
-                                       id="blended-type">
-                                <label for="blended-type">
-                                    <span class="custom-radio-button__heading">Blended</span>
-                                    Combination of two or three dark roasted beans of organic coffees
-                                </label>
-                            </div>
-                        </fieldset>
-                    </details>
-                    <details>
-                        <summary>How much would you like? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
-                                 alt=""></summary>
-                        <fieldset role="radiogroup"
-                                  class="even-columns even-columns--medium">
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="amount"
-                                       id="small-amount">
-                                <label for="small-amount">
-                                    <span class="custom-radio-button__heading">250g</span>
-                                    Perfect for the solo drinker. Yields about 12 delicious cups.
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="amount"
-                                       id="medium-amount">
-                                <label for="medium-amount">
-                                    <span class="custom-radio-button__heading">500g</span>
-                                    Perfect option for a couple. Yields about 40 delectable cups.
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="amount"
-                                       id="large-amount">
-                                <label for="large-amount">
-                                    <span class="custom-radio-button__heading">1000g</span>
-                                    Perfect for offices and events. Yields about 90 delightful cups.
-                                </label>
-                            </div>
-                        </fieldset>
-                    </details>
-                    <details>
-                        <summary>Want us to grind them? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
-                                 alt=""></summary>
-                        <fieldset role="radiogroup"
-                                  class="even-columns even-columns--medium">
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="grind"
-                                       id="wholebean-grind">
-                                <label for="wholebean-grind">
-                                    <span class="custom-radio-button__heading">Wholebean</span>
-                                    Best choice if you cherish the full sensory experience
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="grind"
-                                       id="filter-grind">
-                                <label for="filter-grind">
-                                    <span class="custom-radio-button__heading">Filter</span>
-                                    For drip or pour-over coffee methods such as V60 or Aeropress
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="grind"
-                                       id="cafetiere-grind">
-                                <label for="cafetiere-grind">
-                                    <span class="custom-radio-button__heading">Cafetiére</span>
-                                    Course ground beans specially suited for french press coffee
-                                </label>
-                            </div>
-                        </fieldset>
-                    </details>
-                    <details>
-                        <summary>How often should we deliver? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
-                                 alt=""></summary>
-                        <fieldset role="radiogroup"
-                                  class="even-columns even-columns--medium">
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="frequency"
-                                       id="one-week-frequency">
-                                <label for="one-week-frequency">
-                                    <span class="custom-radio-button__heading">Every week</span>
-                                    $14.00 per shipment. Includes free first-class shipping.
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="frequency"
-                                       id="two-weeks-frequency">
-                                <label for="two-weeks-frequency">
-                                    <span class="custom-radio-button__heading">Every 2 weeks</span>
-                                    $17.25 per shipment. Includes free priority shipping.
-                                </label>
-                            </div>
-                            <div class="custom-radio-button">
-                                <input type="radio"
-                                       name="frequency"
-                                       id="month-frequency">
-                                <label for="month-frequency">
-                                    <span class="custom-radio-button__heading">Every month</span>
-                                    $22.50 per shipment. Includes free priority shipping.
-                                </label>
-                            </div>
-                        </fieldset>
-                    </details>
-                    <div class="plan-creation-form__summary">
-                        <p class="plan-creation-form__summary-heading">Order Summary</p>
-                        <p>“I drink coffee <span>_____</span>, with a <span>_____</span> type of bean.
-                            <span>_____</span> ground ala <span>_____</span>, sent to me <span>_____</span>.”
-                        </p>
-                    </div>
-                    <button type="submit"
-                            disabled
-                            class="button button--primary">Create my plan</button>
-                </form>
+
             </div>
         </section>
 

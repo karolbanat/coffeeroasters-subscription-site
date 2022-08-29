@@ -16,4 +16,35 @@
 			--even-columns-spacer: clamp(6rem, 1rem + 6vw, 10rem);
 		}
 	}
+
+	&__background {
+		--bg-image: url('../assets/plan/mobile/bg-steps.png');
+		@include mixins.background-image-reset;
+		background-image: var(--bg-image);
+
+		&[data-bg-size='medium'] {
+			border-radius: var(--borr-400);
+
+			@include mixins.mq(medium) {
+				--bg-image: url('../assets/plan/tablet/bg-steps.png');
+			}
+
+			@include mixins.mq(large) {
+				--bg-image: none;
+			}
+		}
+
+		&[data-bg-size='large'] {
+			--bg-image: none;
+			padding-block: clamp(8.5rem, 1.5rem + 7.5vw, 10rem);
+
+			@include mixins.mq(large) {
+				--bg-image: url('../assets/plan/desktop/bg-steps.png');
+			}
+		}
+	}
+
+	&[data-page='creation'] {
+		--max-padding: 17.2rem;
+	}
 }

@@ -22,6 +22,7 @@
 
 	@include mixins.mq(medium) {
 		--circle-size: 3rem;
+		--circle-bg: var(--clr-neutral-200);
 		position: relative;
 		isolation: isolate;
 
@@ -31,7 +32,7 @@
 			margin-bottom: 7.5rem;
 			width: var(--circle-size);
 			aspect-ratio: 1;
-			background-color: var(--clr-neutral-200);
+			background-color: var(--circle-bg);
 			border: 1px solid var(--clr-primary-400);
 			border-radius: 50%;
 		}
@@ -51,6 +52,10 @@
 			@include mixins.mq(large) {
 				--line-width: 140%;
 			}
+		}
+
+		&[data-theme='dark'] {
+			--circle-bg: var(--clr-neutral-800, transparent);
 		}
 
 		&__heading {

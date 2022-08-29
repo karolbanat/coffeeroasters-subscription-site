@@ -28,4 +28,9 @@
 			--bg-button: var(--clr-primary-300);
 		}
 	}
+
+	&:disabled {
+		--bg-button: var(--clr-neutral-400);
+		cursor: not-allowed;
+	}
 }

@@ -8,6 +8,8 @@
 		display: block;
 
 		&__nav-links {
+			position: sticky;
+			top: 0;
 			display: flex;
 			flex-direction: column;
 		}

@@ -1,0 +1,70 @@
+@use '../base/mixins';
+
+.custom-radio-button {
+	position: relative;
+	cursor: pointer;
+
+	& > * {
+		cursor: pointer;
+	}
+
+	/* hide radio button */
+	& input[type='radio'] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		appearance: none;
+		opacity: 0;
+	}
+
+	&__label {
+		/* controls */
+		--padding-inline: 2.4rem;
+		--padding-block: 2.8rem;
+		--min-height: 14rem;
+		--text-color: var(--clr-neutral-800);
+		--bg-color: var(--clr-neutral-300);
+		/* layout */
+		display: flex;
+		flex-direction: column;
+		/* spacing */
+		padding-inline: var(--padding-inline);
+		padding-block: var(--padding-block);
+		min-height: var(--min-height);
+		height: 100%;
+		/* appearance */
+		color: var(--text-color);
+		background-color: var(--bg-color);
+		border-radius: var(--borr-300);
+
+		@include mixins.mq(medium) {
+			--padding-block: 3.6rem;
+			--min-height: 25rem;
+		}
+
+		@include mixins.mq(large) {
+			--padding-block: 2.8rem;
+		}
+	}
+
+	/* when focus is on radio button, change label appearance */
+	& input[type='radio']:is(:hover, :focus) ~ &__label {
+		--bg-color: var(--clr-accent-400);
+	}
+
+	/* when radio button checked, change label appearance */
+	& input[type='radio']:checked ~ &__label {
+		--bg-color: var(--clr-primary-400);
+		--text-color: vaR(--clr-neutral-200);
+	}
+
+	&__heading {
+		margin-bottom: 0.75em;
+		font-size: 2.4rem;
+		font-family: var(--ff-secondary);
+		font-weight: var(--fw-900);
+		line-height: 1.1;
+	}
+}

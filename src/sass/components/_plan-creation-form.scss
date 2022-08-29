@@ -1,0 +1,43 @@
+.plan-creation-form {
+	--flow-spacer: 9rem;
+
+	&__details {
+		& > summary {
+			--icon-angle: 0;
+			/* layout */
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 3.2rem;
+			/* typography */
+			font-size: var(--fz-dropdown-heading);
+			font-family: var(--ff-secondary);
+			font-weight: var(--fw-900);
+			color: var(--clr-neutral-500);
+			/* other */
+			cursor: pointer;
+
+			/* arrow */
+			& img {
+				transform: rotate(var(--icon-angle));
+				transition: transform 0.35s ease;
+			}
+		}
+
+		&[open] {
+			& > summary {
+				--icon-angle: -180deg;
+			}
+		}
+	}
+
+	/* when details are not open, next sibling overrides flow spacer to be closer */
+	&__details:not([open]) + &__details {
+		margin-top: 3rem;
+	}
+
+	&__radio-group-field {
+		--even-columns-spacer: clamp(1.6rem, 2vw, 2.4rem);
+		border: none;
+	}
+}

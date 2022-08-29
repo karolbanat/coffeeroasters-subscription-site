@@ -123,17 +123,18 @@
                             <li><a href="#">05 Deliveries</a></li>
                         </ul>
                     </nav>
-                    <form class="plan-creation-form">
-                        <details>
+                    <form class="plan-creation-form | flow">
+                        <details class="plan-creation-form__details">
                             <summary>How do you drink your coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
-                                      class="even-columns even-columns--medium">
+                                      class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="method"
                                            id="capsule-method">
-                                    <label for="capsule-method">
+                                    <label for="capsule-method"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Capsule</span>
                                         Compatible with Nespresso systems and similar brewers
                                     </label>
@@ -142,7 +143,8 @@
                                     <input type="radio"
                                            name="method"
                                            id="filter-method">
-                                    <label for="filter-method">
+                                    <label for="filter-method"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Filter</span>
                                         For pour over or drip methods like Aeropress, Chemex, and V60
                                     </label>
@@ -151,23 +153,25 @@
                                     <input type="radio"
                                            name="method"
                                            id="espresso-method">
-                                    <label for="espresso-method">
+                                    <label for="espresso-method"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Espresso</span>
                                         Dense and finely ground beans for an intense, flavorful experience
                                     </label>
                                 </div>
                             </fieldset>
                         </details>
-                        <details>
+                        <details class="plan-creation-form__details">
                             <summary>What type of coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
-                                      class="even-columns even-columns--medium">
+                                      class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="type"
                                            id="single-origin-type">
-                                    <label for="single-origin-type">
+                                    <label for="single-origin-type"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Single origin</span>
                                         Distinct, high quality coffee from a specific family-owned farm
                                     </label>
@@ -176,7 +180,8 @@
                                     <input type="radio"
                                            name="type"
                                            id="decaf-type">
-                                    <label for="decaf-type">
+                                    <label for="decaf-type"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Decaf</span>
                                         Just like regular coffee, except the caffeine has been removed
                                     </label>
@@ -185,23 +190,25 @@
                                     <input type="radio"
                                            name="type"
                                            id="blended-type">
-                                    <label for="blended-type">
+                                    <label for="blended-type"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Blended</span>
                                         Combination of two or three dark roasted beans of organic coffees
                                     </label>
                                 </div>
                             </fieldset>
                         </details>
-                        <details>
+                        <details class="plan-creation-form__details">
                             <summary>How much would you like? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
-                                      class="even-columns even-columns--medium">
+                                      class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="amount"
                                            id="small-amount">
-                                    <label for="small-amount">
+                                    <label for="small-amount"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">250g</span>
                                         Perfect for the solo drinker. Yields about 12 delicious cups.
                                     </label>
@@ -210,7 +217,8 @@
                                     <input type="radio"
                                            name="amount"
                                            id="medium-amount">
-                                    <label for="medium-amount">
+                                    <label for="medium-amount"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">500g</span>
                                         Perfect option for a couple. Yields about 40 delectable cups.
                                     </label>
@@ -219,23 +227,25 @@
                                     <input type="radio"
                                            name="amount"
                                            id="large-amount">
-                                    <label for="large-amount">
+                                    <label for="large-amount"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">1000g</span>
                                         Perfect for offices and events. Yields about 90 delightful cups.
                                     </label>
                                 </div>
                             </fieldset>
                         </details>
-                        <details>
+                        <details class="plan-creation-form__details">
                             <summary>Want us to grind them? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
-                                      class="even-columns even-columns--medium">
+                                      class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="grind"
                                            id="wholebean-grind">
-                                    <label for="wholebean-grind">
+                                    <label for="wholebean-grind"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Wholebean</span>
                                         Best choice if you cherish the full sensory experience
                                     </label>
@@ -244,7 +254,8 @@
                                     <input type="radio"
                                            name="grind"
                                            id="filter-grind">
-                                    <label for="filter-grind">
+                                    <label for="filter-grind"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Filter</span>
                                         For drip or pour-over coffee methods such as V60 or Aeropress
                                     </label>
@@ -253,23 +264,25 @@
                                     <input type="radio"
                                            name="grind"
                                            id="cafetiere-grind">
-                                    <label for="cafetiere-grind">
+                                    <label for="cafetiere-grind"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Cafetiére</span>
                                         Course ground beans specially suited for french press coffee
                                     </label>
                                 </div>
                             </fieldset>
                         </details>
-                        <details>
+                        <details class="plan-creation-form__details">
                             <summary>How often should we deliver? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
                             <fieldset role="radiogroup"
-                                      class="even-columns even-columns--medium">
+                                      class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="frequency"
                                            id="one-week-frequency">
-                                    <label for="one-week-frequency">
+                                    <label for="one-week-frequency"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Every week</span>
                                         $14.00 per shipment. Includes free first-class shipping.
                                     </label>
@@ -278,7 +291,8 @@
                                     <input type="radio"
                                            name="frequency"
                                            id="two-weeks-frequency">
-                                    <label for="two-weeks-frequency">
+                                    <label for="two-weeks-frequency"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Every 2 weeks</span>
                                         $17.25 per shipment. Includes free priority shipping.
                                     </label>
@@ -287,7 +301,8 @@
                                     <input type="radio"
                                            name="frequency"
                                            id="month-frequency">
-                                    <label for="month-frequency">
+                                    <label for="month-frequency"
+                                           class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Every month</span>
                                         $22.50 per shipment. Includes free priority shipping.
                                     </label>

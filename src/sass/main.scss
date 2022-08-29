@@ -23,6 +23,7 @@
 /* other */
 @use './components/social-links';
 @use './components/address';
+@use './components/custom-radio-button';
 /* sections */
 @use './components/primary-header';
 @use './components/primary-navigation';
@@ -35,6 +36,9 @@
 @use './components/about';
 @use './components/quality';
 @use './components/contact';
+
+/* plan page */
+@use './components/plan-creation-form';
 
 /* utility */
 @use './utility/spacers';

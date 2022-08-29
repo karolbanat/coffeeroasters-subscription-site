@@ -1,0 +1,25 @@
+.summary {
+	padding-block: 3.6rem;
+	padding-inline: clamp(2.4rem, 1rem + 4vw, 6.4rem);
+	background-color: var(--clr-neutral-800);
+	color: var(--clr-neutral-300);
+	border-radius: var(--borr-400);
+
+	&__heading {
+		margin-bottom: 1rem;
+		font-size: var(--fz-400);
+		text-transform: uppercase;
+		line-height: 1;
+		color: var(--clr-neutral-500);
+	}
+
+	&__text {
+		font-size: 2.4rem;
+		font-family: var(--ff-secondary);
+		font-weight: var(--fw-900);
+
+		& > span {
+			color: var(--clr-primary-400);
+		}
+	}
+}

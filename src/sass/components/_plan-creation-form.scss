@@ -1,5 +1,8 @@
 .plan-creation-form {
 	--flow-spacer: 9rem;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: clamp(12rem, 18.75vw, 17rem);
 
 	&__details {
 		& > summary {
@@ -39,5 +42,10 @@
 	&__radio-group-field {
 		--even-columns-spacer: clamp(1.6rem, 2vw, 2.4rem);
 		border: none;
+	}
+
+	& button[type='submit'] {
+		align-self: flex-end;
+		margin-top: 4rem;
 	}
 }

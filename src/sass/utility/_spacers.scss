@@ -28,6 +28,16 @@
 	}
 }
 
-.padding-block-clamp-lg {
-	padding-block: clamp(12rem, 3rem + 15vw, 16.8rem);
+.padding-block-md {
+	padding-block: clamp(6.4rem, 1.5rem + 7.5vw, 9rem);
+}
+
+.padding-block-section {
+	--min-padding-block: 12rem;
+	--max-padding-block: 17rem;
+	padding-block: clamp(var(--min-padding-block), 18.75vw, var(--max-padding-block));
+}
+
+.padding-bottom-cushion {
+	padding-bottom: 0.1rem;
 }

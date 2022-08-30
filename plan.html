@@ -24,6 +24,9 @@
 </head>
 
 <body>
+    <a href="#primary-heading"
+       class="skip-link">Skip to content</a>
+
     <header class="primary-header primary-header--plan">
         <div class="container">
             <nav aria-label="primary"
@@ -115,28 +118,33 @@
                          class="creation-nav">
                         <ul class="creation-nav__nav-links">
                             <li class="creation-nav__nav-item"><a href="#preferences"
-                                   class="creation-nav__nav-link"><span>01</span> Preferences</a></li>
+                                   class="creation-nav__nav-link"><span aria-hidden="true">01</span> Preferences</a>
+                            </li>
                             <li class="creation-nav__nav-item"><a href="#bean-type"
-                                   class="creation-nav__nav-link"><span>02</span> Bean type</a></li>
+                                   class="creation-nav__nav-link"><span aria-hidden="true">02</span> Bean type</a></li>
                             <li class="creation-nav__nav-item"><a href="#quantity"
-                                   class="creation-nav__nav-link"><span>03</span> Quantity</a></li>
+                                   class="creation-nav__nav-link"><span aria-hidden="true">03</span> Quantity</a></li>
                             <li class="creation-nav__nav-item"><a href="#grind-option"
-                                   class="creation-nav__nav-link"><span>04</span> Grind option</a></li>
+                                   class="creation-nav__nav-link"><span aria-hidden="true">04</span> Grind option</a>
+                            </li>
                             <li class="creation-nav__nav-item"><a href="#deliveries"
-                                   class="creation-nav__nav-link"><span>05</span> Deliveries</a></li>
+                                   class="creation-nav__nav-link"><span aria-hidden="true">05</span> Deliveries</a></li>
                         </ul>
                     </nav>
                     <form class="plan-creation-form | flow">
                         <details id="preferences"
                                  class="plan-creation-form__details">
-                            <summary>How do you drink your coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                            <summary id="preferences-summary">How do you drink your coffee? <img
+                                     src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
-                            <fieldset role="radiogroup"
+                            <fieldset aria-describedby="preferences-summary"
+                                      role="radiogroup"
                                       class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="method"
-                                           id="capsule-method">
+                                           id="capsule-method"
+                                           data-method="capsules">
                                     <label for="capsule-method"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Capsule</span>
@@ -146,7 +154,8 @@
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="method"
-                                           id="filter-method">
+                                           id="filter-method"
+                                           data-method="filter">
                                     <label for="filter-method"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Filter</span>
@@ -156,7 +165,8 @@
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="method"
-                                           id="espresso-method">
+                                           id="espresso-method"
+                                           data-method="espresso">
                                     <label for="espresso-method"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Espresso</span>
@@ -167,14 +177,17 @@
                         </details>
                         <details id="bean-type"
                                  class="plan-creation-form__details">
-                            <summary>What type of coffee? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                            <summary id="bean-type-summary">What type of coffee? <img
+                                     src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
-                            <fieldset role="radiogroup"
+                            <fieldset aria-describedby="bean-type-summary"
+                                      role="radiogroup"
                                       class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="type"
-                                           id="single-origin-type">
+                                           id="single-origin-type"
+                                           data-coffee-type="single origin">
                                     <label for="single-origin-type"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Single origin</span>
@@ -184,7 +197,8 @@
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="type"
-                                           id="decaf-type">
+                                           id="decaf-type"
+                                           data-coffee-type="decaf">
                                     <label for="decaf-type"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Decaf</span>
@@ -194,7 +208,8 @@
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="type"
-                                           id="blended-type">
+                                           id="blended-type"
+                                           data-coffee-type="blended">
                                     <label for="blended-type"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Blended</span>
@@ -205,14 +220,17 @@
                         </details>
                         <details id="quantity"
                                  class="plan-creation-form__details">
-                            <summary>How much would you like? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                            <summary id="quantity-summary">How much would you like? <img
+                                     src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
-                            <fieldset role="radiogroup"
+                            <fieldset aria-describedby="quantity-summary"
+                                      role="radiogroup"
                                       class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="amount"
-                                           id="small-amount">
+                                           id="small-amount"
+                                           data-quantity="250">
                                     <label for="small-amount"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">250g</span>
@@ -222,7 +240,8 @@
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="amount"
-                                           id="medium-amount">
+                                           id="medium-amount"
+                                           data-quantity="500">
                                     <label for="medium-amount"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">500g</span>
@@ -232,7 +251,8 @@
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="amount"
-                                           id="large-amount">
+                                           id="large-amount"
+                                           data-quantity="1000">
                                     <label for="large-amount"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">1000g</span>
@@ -241,16 +261,20 @@
                                 </div>
                             </fieldset>
                         </details>
-                        <details id="grind-option"
+                        <details aria-disabled="false"
+                                 id="grind-option"
                                  class="plan-creation-form__details">
-                            <summary>Want us to grind them? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                            <summary id="grind-summary">Want us to grind them? <img
+                                     src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
-                            <fieldset role="radiogroup"
+                            <fieldset aria-describedby="grind-summary"
+                                      role="radiogroup"
                                       class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="grind"
-                                           id="wholebean-grind">
+                                           id="wholebean-grind"
+                                           data-grind="wholebean">
                                     <label for="wholebean-grind"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Wholebean</span>
@@ -260,7 +284,8 @@
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="grind"
-                                           id="filter-grind">
+                                           id="filter-grind"
+                                           data-grind="filter">
                                     <label for="filter-grind"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Filter</span>
@@ -270,7 +295,8 @@
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="grind"
-                                           id="cafetiere-grind">
+                                           id="cafetiere-grind"
+                                           data-grind="cafetiére">
                                     <label for="cafetiere-grind"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Cafetiére</span>
@@ -281,50 +307,73 @@
                         </details>
                         <details id="deliveries"
                                  class="plan-creation-form__details">
-                            <summary>How often should we deliver? <img src="./dist/assets/plan/desktop/icon-arrow.svg"
+                            <summary id="deliveries-summary">How often should we deliver? <img
+                                     src="./dist/assets/plan/desktop/icon-arrow.svg"
                                      alt=""></summary>
-                            <fieldset role="radiogroup"
+                            <fieldset aria-describedby="deliveries-summary"
+                                      role="radiogroup"
                                       class="plan-creation-form__radio-group-field | even-columns even-columns--medium">
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="frequency"
-                                           id="one-week-frequency">
+                                           id="one-week-frequency"
+                                           data-frequency="week">
                                     <label for="one-week-frequency"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Every week</span>
-                                        $14.00 per shipment. Includes free first-class shipping.
+                                        <span><span id="week-pricing">$14.00</span> per shipment. Includes free
+                                            first-class
+                                            shipping.
+                                        </span>
                                     </label>
                                 </div>
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="frequency"
-                                           id="two-weeks-frequency">
+                                           id="two-weeks-frequency"
+                                           data-frequency="2 weeks">
                                     <label for="two-weeks-frequency"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Every 2 weeks</span>
-                                        $17.25 per shipment. Includes free priority shipping.
+                                        <span><span id="two-week-pricing">$17.25</span> per shipment. Includes free
+                                            priority
+                                            shipping.
+                                        </span>
                                     </label>
                                 </div>
                                 <div class="custom-radio-button">
                                     <input type="radio"
                                            name="frequency"
-                                           id="month-frequency">
+                                           id="month-frequency"
+                                           data-frequency="month">
                                     <label for="month-frequency"
                                            class="custom-radio-button__label">
                                         <span class="custom-radio-button__heading">Every month</span>
-                                        $22.50 per shipment. Includes free priority shipping.
+                                        <span><span id="month-pricing">$22.50</span> per shipment. Includes free
+                                            priority
+                                            shipping.</span>
                                     </label>
                                 </div>
                             </fieldset>
                         </details>
                         <div class="summary">
                             <p class="summary__heading">Order Summary</p>
-                            <p class="summary__text">“I drink coffee <span>_____</span>, with a
-                                <span>_____</span> type of bean.
-                                <span>_____</span> ground ala <span>_____</span>, sent to me <span>_____</span>.”
+                            <p class="summary__text">
+                                “I drink coffee
+                                <span id="join-word"
+                                      data-ommited=""></span>
+                                <span id="method-output">_____</span>
+                                , with a <span id="coffee-type-output">_____</span> type of bean.
+                                <span id="quantity-output">_____</span>
+                                <span id="grind-part-output"
+                                      data-ommited> ground ala
+                                </span>
+                                <span id="grind-output">_____</span>, sent to me
+                                <span id="frequency-output">_____</span>.”
                             </p>
                         </div>
-                        <button type="submit"
+                        <button id="plan-creation-submit"
+                                type="submit"
                                 disabled
                                 class="button button--primary">Create my plan</button>
                     </form>
@@ -393,7 +442,10 @@
         </div>
     </footer>
 
-    <script src="./dist/js/main.min.js"></script>
+    <script src="./dist/js/main.min.js"
+            defer></script>
+    <script src="./dist/js/plan-form.min.js"
+            defer></script>
 </body>
 
 </html>

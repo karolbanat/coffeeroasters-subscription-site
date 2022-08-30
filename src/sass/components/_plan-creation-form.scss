@@ -7,6 +7,12 @@
 	margin-bottom: clamp(12rem, 18.75vw, 17rem);
 
 	&__details {
+		--summary-cursor: pointer;
+		&[data-disabled] {
+			opacity: 0.75;
+			--summary-cursor: not-allowed;
+		}
+
 		& > summary {
 			--icon-angle: 0;
 			@include mixins.accent-font;
@@ -19,7 +25,7 @@
 			font-size: var(--fz-dropdown-heading);
 			color: var(--clr-neutral-500);
 			/* other */
-			cursor: pointer;
+			cursor: var(--summary-cursor);
 
 			/* arrow */
 			& img {

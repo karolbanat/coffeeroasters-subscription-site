@@ -1,20 +1,8 @@
-let toggleBtn;
-let primaryNav;
+/* nav elements */
+const toggleBtn = document.querySelector('.toggle-btn');
+const primaryNav = document.querySelector('#primary-nav');
 
-const main = () => {
-	prepareDOMElements();
-	prepareDOMEvents();
-};
-
-const prepareDOMElements = () => {
-	toggleBtn = document.querySelector('.toggle-btn');
-	primaryNav = document.querySelector('#primary-nav');
-};
-
-const prepareDOMEvents = () => {
-	toggleBtn.addEventListener('click', handleToggleBtn);
-};
-
+/* toggle nav button handling */
 const handleToggleBtn = () => {
 	toggleBtn.toggleAttribute('data-expanded');
 	const expanded = toggleBtn.hasAttribute('data-expanded');
@@ -22,4 +10,4 @@ const handleToggleBtn = () => {
 	toggleBtn.setAttribute('aria-expanded', expanded);
 };
 
-document.addEventListener('DOMContentLoaded', main);
+toggleBtn.addEventListener('click', handleToggleBtn);

@@ -50,7 +50,7 @@
 	}
 
 	/* when focus is on radio button, change label appearance */
-	& input[type='radio']:is(:hover, :focus) ~ &__label {
+	& input[type='radio']:is(:hover, :focus-visible) ~ &__label {
 		--bg-color: var(--clr-accent-400);
 	}
 
@@ -58,6 +58,11 @@
 	& input[type='radio']:checked ~ &__label {
 		--bg-color: var(--clr-primary-400);
 		--text-color: vaR(--clr-neutral-200);
+	}
+
+	/* give outline to see if checked element is focused */
+	& input[type='radio']:checked:focus-visible ~ &__label {
+		outline: 4px solid var(--clr-accent-400);
 	}
 
 	&__heading {

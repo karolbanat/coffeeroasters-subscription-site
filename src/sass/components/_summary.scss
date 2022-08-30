@@ -19,8 +19,15 @@
 		@include mixins.accent-font;
 		font-size: 2.4rem;
 
-		& > span {
-			color: var(--clr-primary-400);
+		& span {
+			&:not([data-ommited]) {
+				text-transform: capitalize;
+				color: var(--clr-primary-400);
+			}
+
+			&[data-hidden] {
+				display: none;
+			}
 		}
 	}
 }

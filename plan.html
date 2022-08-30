@@ -385,17 +385,29 @@
     </main>
 
     <!-- Modal -->
-    <!-- Order Summary
-
-    “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-    sent to me _____.”
-
-    Is this correct? You can proceed to checkout or go back to plan selection if something
-    is off. Subscription discount codes can also be redeemed at the checkout.
-
-    $_____/month
-
-    Checkout -->
+    <div aria-modal="true"
+         aria-labelledby="modal-heading"
+         role="dialog"
+         class="modal">
+        <h2 id="modal-heading"
+            class="modal__heading">Order Summary</h2>
+        <div class="modal__body">
+            <div class="summary">
+                <p class="summary__text">“I drink coffee <span>_____</span>, with a <span>_____</span> type of bean.
+                    <span>_____</span> ground ala <span>_____</span>,
+                    sent to me <span>_____</span>.”
+                </p>
+            </div>
+            <p>Is this correct? You can proceed to checkout or go back to plan selection if something
+                is off. Subscription discount codes can also be redeemed at the checkout.</p>
+            <div class="modal__checkout">
+                <span id="modal-checkout-price"
+                      class="modal-checkout-price">$_____/month</span>
+                <button class="button button--primary">Checkout<span id="button-modal-checkout-price"
+                          class="modal-checkout-price"></span></button>
+            </div>
+        </div>
+    </div>
     <!-- End modal -->
 
     <footer class="primary-footer">

@@ -1,7 +1,7 @@
 @use '../base/mixins';
 
 .primary-footer {
-	margin-bottom: clamp(7.2rem, 10vw, 8.8rem);
+	padding-bottom: clamp(7.2rem, 10vw, 8.8rem);
 
 	&__body {
 		--gap: 4.8rem;

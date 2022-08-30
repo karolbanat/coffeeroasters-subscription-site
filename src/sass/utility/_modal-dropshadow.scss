@@ -1,0 +1,10 @@
+.modal-dropshadow {
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 99990;
+		background-color: hsl(0 0% 0% / 0.5);
+	}
+}

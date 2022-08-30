@@ -391,8 +391,8 @@
          class="modal">
         <h2 id="modal-heading"
             class="modal__heading">Order Summary</h2>
-        <div class="modal__body">
-            <div class="summary">
+        <div class="modal__body | flow">
+            <div class="summary modal__summary">
                 <p class="summary__text">“I drink coffee <span>_____</span>, with a <span>_____</span> type of bean.
                     <span>_____</span> ground ala <span>_____</span>,
                     sent to me <span>_____</span>.”
@@ -402,9 +402,9 @@
                 is off. Subscription discount codes can also be redeemed at the checkout.</p>
             <div class="modal__checkout">
                 <span id="modal-checkout-price"
-                      class="modal-checkout-price">$_____/month</span>
+                      class="modal__checkout-price modal__checkout-price--md">$_____/month</span>
                 <button class="button button--primary">Checkout<span id="button-modal-checkout-price"
-                          class="modal-checkout-price"></span></button>
+                          class="modal__checkout-price modal__checkout-price--sm"> - $___/mo</span></button>
             </div>
         </div>
     </div>

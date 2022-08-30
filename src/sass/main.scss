@@ -27,6 +27,7 @@
 @use './components/custom-radio-button';
 @use './components/creation-nav';
 @use './components/summary';
+@use './components/modal';
 /* sections */
 @use './components/primary-header';
 @use './components/primary-navigation';
@@ -50,4 +51,5 @@
 @use './utility/text';
 @use './utility/background-color';
 @use './utility/background-image';
+@use './utility/modal-dropshadow';
 @use './utility/visually-hidden';

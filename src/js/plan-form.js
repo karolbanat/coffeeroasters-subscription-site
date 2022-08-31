@@ -171,7 +171,7 @@ const handleSubmitBtn = (e) => {
 const insertCheckoutPrice = () => {
 	const checkoutPrice = calculatePrice();
 	modalCheckoutPrice.innerText = `$${checkoutPrice}/month`;
-	modalButtonCheckoutPrice.innerText = `$${checkoutPrice}/mo`;
+	modalButtonCheckoutPrice.innerText = `-$${checkoutPrice}/mo`;
 };
 
 const calculatePrice = () => {
@@ -198,6 +198,7 @@ const showModal = () => {
 const closeModal = () => {
 	checkoutModal.classList.remove('visible');
 	document.body.classList.remove('modal-dropshadow');
+	planSubmitBtn.focus(); // on close give creation button focus
 };
 
 /* radio buttons handlers */

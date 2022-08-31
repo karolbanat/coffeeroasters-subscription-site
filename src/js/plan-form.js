@@ -6,24 +6,24 @@ const quantityButtons = document.querySelectorAll('[data-quantity]');
 const grindButtons = document.querySelectorAll('[data-grind]');
 const frequencyButtons = document.querySelectorAll('[data-frequency]');
 /* outputs */
-const methodOutput = document.querySelector('#method-output');
-const joinWord = document.querySelector('#join-word');
-const coffeeTypeOutput = document.querySelector('#coffee-type-output');
-const quantityOutput = document.querySelector('#quantity-output');
-const grindPartOutput = document.querySelector('#grind-part-output');
-const grindOutput = document.querySelector('#grind-output');
-const frequencyOutput = document.querySelector('#frequency-output');
-
+const summaryText = document.querySelector('#summary-text');
+const modalSummaryText = document.querySelector('#modal-summary-text');
 /* pricing spans */
 const weekPricing = document.querySelector('#week-pricing');
 const twoWeekPricing = document.querySelector('#two-week-pricing');
 const monthPricing = document.querySelector('#month-pricing');
+/* modal */
+const checkoutModal = document.querySelector('#checkout-modal');
+const closeModalBtn = checkoutModal.querySelector('#modal-close-button');
+const modalCheckoutPrice = checkoutModal.querySelector('#modal-checkout-price');
+const modalButtonCheckoutPrice = checkoutModal.querySelector('#button-modal-checkout-price');
 /* --- other --- */
 const grindDetails = document.querySelector('#grind-option');
 const grindDetailsSummary = grindDetails.querySelector('summary');
 const planSubmitBtn = document.querySelector('#plan-creation-submit');
 /* form elements end */
 
+const SUMMARY_PLACEHOLDER = '_____';
 const PRICING_DATA = {
 	250: {
 		week: 7.2,
@@ -51,9 +51,8 @@ let frequency = '';
 /* radio buttons handling */
 const handleMethodChoice = (e) => {
 	method = e.target.dataset.method;
-	joinWord.innerText = method === 'capsules' ? 'using' : 'as';
-	methodOutput.innerText = method;
 	preventCapsuleGrind(method);
+	insertSummary();
 };
 
 /* handling details for grinding options using method chosen */
@@ -63,19 +62,17 @@ const preventCapsuleGrind = (method) => {
 	grindDetails.setAttribute('aria-disabled', isCapsules);
 	grindDetails.toggleAttribute('data-disabled', isCapsules); // disabled styles for grind details accordion
 	grindDetailsSummary.tabIndex = isCapsules ? -1 : 0; // prevent from tabbing if disabled
-	grindPartOutput.toggleAttribute('data-hidden', isCapsules); // hide 'ground ala' text from summary
-	grindOutput.toggleAttribute('data-hidden', isCapsules); // hide grind output from summary
 };
 
 const handleCoffeeTypeChoice = (e) => {
 	coffeeType = e.target.dataset.coffeeType;
-	coffeeTypeOutput.innerText = coffeeType;
+	insertSummary();
 };
 
 const handleQuantityChoice = (e) => {
 	quantity = e.target.dataset.quantity;
-	quantityOutput.innerText = `${quantity}g`;
 	insertPricingData(quantity);
+	insertSummary();
 };
 
 /* inserting pricings into frequency details radio buttons */
@@ -88,12 +85,12 @@ const insertPricingData = (quantity) => {
 
 const handleGrindChoice = (e) => {
 	grind = e.target.dataset.grind;
-	grindOutput.innerText = grind;
+	insertSummary();
 };
 
 const handleFrequencyChoice = (e) => {
 	frequency = e.target.dataset.frequency;
-	frequencyOutput.innerText = `every ${frequency}`;
+	insertSummary();
 };
 
 const radioButtonHandler = (e, handler) => {
@@ -101,6 +98,59 @@ const radioButtonHandler = (e, handler) => {
 	handleSubmitBtnActivation();
 };
 
+/* summary text creation */
+const insertSummary = () => {
+	summaryText.innerHTML = createSummary();
+};
+
+const insertModalSummary = () => {
+	modalSummaryText.innerHTML = createSummary();
+};
+
+const createSummary = () => {
+	const methodText = createMethodPart();
+	const coffeeTypeText = createCoffeTypePart();
+	const quantityText = createQuantityPart();
+	const grindText = createGrindPart();
+	const frequencyText = createFrequencyPart();
+
+	return `“I drink coffee ${methodText}, with a ${coffeeTypeText} type of bean. ${quantityText}, ${grindText}sent to me ${frequencyText}.”`;
+};
+
+const createMethodPart = () => {
+	if (method === '') return createSpan();
+	const joinWord = method === 'capsules' ? 'using' : 'as';
+	return `${joinWord} ${createSpan(method)}`;
+};
+
+const createCoffeTypePart = () => {
+	const type = coffeeType || SUMMARY_PLACEHOLDER;
+	return createSpan(type);
+};
+
+const createQuantityPart = () => {
+	if (quantity === '') return createSpan();
+	const quantityText = `${quantity}g`;
+	return createSpan(quantityText);
+};
+
+const createGrindPart = () => {
+	if (method === 'capsules') return '';
+	const grindText = `ground ala ${grind ? createSpan(grind) : createSpan()}, `;
+	return grindText;
+};
+
+const createFrequencyPart = () => {
+	if (frequency === '') return createSpan();
+	const frequencyText = `every ${frequency}`;
+	return createSpan(frequencyText);
+};
+
+const createSpan = (text = SUMMARY_PLACEHOLDER) => {
+	return `<span>${text}</span>`;
+};
+
+/* submit button activation */
 const handleSubmitBtnActivation = () => {
 	const methodChosen = method !== '';
 	const coffeeTypeChosen = coffeeType !== '';
@@ -109,6 +159,45 @@ const handleSubmitBtnActivation = () => {
 	const frequencyChosen = frequency !== '';
 	const shouldActivate = methodChosen && coffeeTypeChosen && quantityChosen && grindChosen && frequencyChosen;
 	planSubmitBtn.toggleAttribute('disabled', !shouldActivate);
+};
+
+/* submit button handling */
+const handleSubmitBtn = (e) => {
+	e.preventDefault();
+	showModal();
+	insertCheckoutPrice();
+};
+
+const insertCheckoutPrice = () => {
+	const checkoutPrice = calculatePrice();
+	modalCheckoutPrice.innerText = `$${checkoutPrice}/month`;
+	modalButtonCheckoutPrice.innerText = `$${checkoutPrice}/mo`;
+};
+
+const calculatePrice = () => {
+	switch (frequency) {
+		case 'week':
+			return (4 * PRICING_DATA[quantity].week).toFixed(2);
+		case '2 weeks':
+			return (2 * PRICING_DATA[quantity].twoWeeks).toFixed(2);
+		case 'month':
+			return (1 * PRICING_DATA[quantity].month).toFixed(2);
+		default:
+			return '0.00';
+	}
+};
+
+/* modal handling */
+const showModal = () => {
+	checkoutModal.classList.add('visible');
+	document.body.classList.add('modal-dropshadow');
+	insertModalSummary();
+	closeModalBtn.focus();
+};
+
+const closeModal = () => {
+	checkoutModal.classList.remove('visible');
+	document.body.classList.remove('modal-dropshadow');
 };
 
 /* radio buttons handlers */
@@ -130,3 +219,8 @@ grindDetailsSummary.addEventListener('click', (e) => {
 	if (grindDetails.hasAttribute('data-disabled')) return;
 	grindDetails.open = !grindDetails.open;
 });
+
+/* submit button */
+planSubmitBtn.addEventListener('click', handleSubmitBtn);
+/* modal */
+closeModalBtn.addEventListener('click', closeModal);

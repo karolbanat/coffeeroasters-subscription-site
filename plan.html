@@ -72,13 +72,13 @@
 
     <main>
 
-        <section aria-label="Plan creation steps"
-                 class="plan-steps | padding-block-section text-center-sm">
+        <section class="plan-steps | padding-block-section text-center-sm">
             <div class="plan-steps__background"
                  data-bg-size="medium">
                 <div class="container">
                     <div class="plan-steps__background | padding-inline-clamp-lg text-neutral-200"
                          data-bg-size="large">
+                        <h2 class="visually-hidden">Plan creation steps</h2>
                         <ol class="plan-steps__steps | even-columns even-columns--medium">
                             <li class="step-card"
                                 data-theme="dark">
@@ -358,18 +358,10 @@
                         </details>
                         <div class="summary">
                             <p class="summary__heading">Order Summary</p>
-                            <p class="summary__text">
-                                “I drink coffee
-                                <span id="join-word"
-                                      data-ommited=""></span>
-                                <span id="method-output">_____</span>
-                                , with a <span id="coffee-type-output">_____</span> type of bean.
-                                <span id="quantity-output">_____</span>
-                                <span id="grind-part-output"
-                                      data-ommited> ground ala
-                                </span>
-                                <span id="grind-output">_____</span>, sent to me
-                                <span id="frequency-output">_____</span>.”
+                            <p id="summary-text"
+                               class="summary__text">
+                                “I drink coffee <span>_____</span>, with a <span>_____</span> type of bean.
+                                <span>_____</span>, ground ala <span>_____</span>, sent to me <span>_____</span>.”
                             </p>
                         </div>
                         <button id="plan-creation-submit"
@@ -383,32 +375,6 @@
         </section>
 
     </main>
-
-    <!-- Modal -->
-    <div aria-modal="true"
-         aria-labelledby="modal-heading"
-         role="dialog"
-         class="modal">
-        <h2 id="modal-heading"
-            class="modal__heading">Order Summary</h2>
-        <div class="modal__body | flow">
-            <div class="summary modal__summary">
-                <p class="summary__text">“I drink coffee <span>_____</span>, with a <span>_____</span> type of bean.
-                    <span>_____</span> ground ala <span>_____</span>,
-                    sent to me <span>_____</span>.”
-                </p>
-            </div>
-            <p>Is this correct? You can proceed to checkout or go back to plan selection if something
-                is off. Subscription discount codes can also be redeemed at the checkout.</p>
-            <div class="modal__checkout">
-                <span id="modal-checkout-price"
-                      class="modal__checkout-price modal__checkout-price--md">$_____/month</span>
-                <button class="button button--primary">Checkout<span id="button-modal-checkout-price"
-                          class="modal__checkout-price modal__checkout-price--sm"> - $___/mo</span></button>
-            </div>
-        </div>
-    </div>
-    <!-- End modal -->
 
     <footer class="primary-footer">
         <div class="container">
@@ -453,6 +419,43 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div aria-modal="true"
+         aria-labelledby="modal-heading"
+         role="dialog"
+         id="checkout-modal"
+         class="modal">
+        <button aria-label="Close modal"
+                id="modal-close-button"
+                class="modal__close-btn">
+            <img src="./dist/assets/shared/mobile/icon-close.svg"
+                 alt=""
+                 class="modal__close-icon">
+        </button>
+        <h2 id="modal-heading"
+            class="modal__heading">Order Summary</h2>
+        <div class="modal__body | flow">
+            <div class="summary modal__summary">
+                <p id="modal-summary-text"
+                   class="summary__text">“I drink coffee <span>_____</span>, with a <span>_____</span> type of bean.
+                    <span>_____</span> ground ala <span>_____</span>,
+                    sent to me <span>_____</span>.”
+                </p>
+            </div>
+            <p>Is this correct? You can proceed to checkout or go back to plan selection if something
+                is off. Subscription discount codes can also be redeemed at the checkout.</p>
+            <div class="modal__checkout">
+                <span id="modal-checkout-price"
+                      class="modal__checkout-price modal__checkout-price--md">$_____/month</span>
+                <a id="modal-checkout-button"
+                   href="./index.html"
+                   class="button button--primary">Checkout<span id="button-modal-checkout-price"
+                          class="modal__checkout-price modal__checkout-price--sm"> - $___/mo</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- End modal -->
 
     <script src="./dist/js/main.min.js"
             defer></script>

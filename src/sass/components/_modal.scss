@@ -21,6 +21,28 @@
 	border-radius: var(--borr-300);
 	overflow: hidden;
 
+	&.visible {
+		display: block;
+	}
+
+	&__close-btn {
+		position: absolute;
+		right: 2.4rem;
+		top: 2.4rem;
+		padding: 0.75em;
+		background: none;
+		border: none;
+		cursor: pointer;
+
+		&:focus {
+			outline: 2px solid var(--clr-primary-400);
+		}
+	}
+
+	&__close-icon {
+		filter: brightness(0) invert(1);
+	}
+
 	&__heading {
 		@include mixins.accent-font;
 		padding-block: 1em;
